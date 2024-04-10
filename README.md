@@ -13,14 +13,14 @@ Savor Local Delights: Indulge your taste buds with authentic flavors and culinar
 Capture Timeless Memories: Preserve your adventures with stunning photographs and cherish the moments that take your breath away.
 
 #### Getting Started
-To start exploring with Palmstar, simply visit our website at <insert company website link> Browse our selection of tours, customize your itinerary, and book your next adventure with ease.
+To start exploring with Palmstar, simply visit our website at << insert company website link >> Browse our selection of tours, customize your itinerary, and book your next adventure with ease.
 
 #### Contributing
-We welcome contributions from the community to help us improve and expand our offerings. If you have ideas for new tours, feedback on existing ones, or would like to collaborate, please reach out to us at <insert contact email>.
+We welcome contributions from the community to help us improve and expand our offerings. If you have ideas for new tours, feedback on existing ones, or would like to collaborate, please reach out to us at << insert contact email >>.
 
 ##### License
 This project is licensed under the MIT License.
 
 ###### Contact Us
-For any inquiries or assistance, please contact us at <insert contact email> or visit our < make this a hyperlink contact page>.
+For any inquiries or assistance, please contact us at <<insert contact email>> or visit our << make this a hyperlink contact page>>.
 
