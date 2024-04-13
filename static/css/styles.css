@@ -137,7 +137,7 @@ span {
 }
 
 .card-body>p>i {
-  color: rgb(226, 226, 4);
+  color: #ffc107;
   transition: 1s;
 }
 
@@ -214,6 +214,11 @@ span {
   color: #777;
 }
 
+@media (min-width: 992px) {
+  .book-now{
+    margin-left: 40px;
+  }
+}
 
 @media (max-width: 991.98px) {
   .offcanvas-collapse {
@@ -236,8 +241,11 @@ span {
   }
 
   .book-now {
-    margin-top: 50px;
+    margin-top: 16pt;
+    position: absolute;
     margin-left: 10px;
+    left: 2px;
+    bottom: 20pt;
   }
 }
 
@@ -246,9 +254,9 @@ span {
     padding-bottom: 10px;
   }
 
-  .cta{
+  .cta {
     margin-bottom: 25px;
   }
 
-  
+
 }
