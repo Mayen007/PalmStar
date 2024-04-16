@@ -258,14 +258,3 @@ span {
     margin-bottom: 25px;
   }
 }
-.animated {
-  animation: fadeIn 1s forwards;
-}
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
