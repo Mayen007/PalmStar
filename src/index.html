@@ -10,7 +10,7 @@
   <title>PalmStar - Tour Company</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="shortcut icon" href="../static/img/palm-logo.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="../static/img/palmstar-logo.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <meta name="google-site-verification" content="xxm15zNSKPA8wpHFqYnHPLd1DtZzqBgq3MmapDrGEF4" />
 </head>
@@ -18,7 +18,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top shadow-lg" aria-label="Main navigation">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="../static/img/palm-logo.jpg" alt="logo" loading="lazy" class="me-1"
+      <a class="navbar-brand" href="#"><img src="../static/img/palmstar-logo.png" alt="logo" loading="lazy" class="me-1"
           width="35px" height="25px">PalmStar</a>
       <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -169,21 +169,21 @@
           </div>
         </div>
       </div>
-      <div class="hero-overlay">
+      <div class="hero-overlay d-flex align-items-center justify-content-center">
         <div class="hero-content text-center">
-          <h1 class="display-1 text-warning fw-bold">Your Passport to Adventure</h1>
-          <p class="my-5 hero-quote lead">Embark on extraordinary journeys,
+          <h1 class="display-1 text-warning fw-bold mt-5 text-shadow">Your Passport to Adventure</h1>
+          <p class="my-4 hero-quote lead text-shadow">Embark on extraordinary journeys,
             create
             everlasting
             memories, and explore the wonders of the world with us.
           </p>
-          <div class="cta mt-5">
+          <div class="cta">
             <a href="#destinations" class="btn btn-warning">Discover Destinations</a>
             <!-- Button trigger modal -->
-
           </div>
         </div>
       </div>
+      
 
     </section>
     <section class="container user-select-none mt-5">
@@ -216,9 +216,41 @@
         </div>
       </div>
     </section>
+    <section id="features" class=" user-select-none">
+      <h2 class="text-center my-5 display-1">Our Key <span class="text-warning">Features</span></h2>
+      <div class="container">
+        <div class="row mt-3 features">
+          <div class="col-lg-4">
+            <div class="feature-icon mb-2">
+              <i class="bi bi-globe fs-3"></i>
+            </div>
+            <h3 class="mb-2">Global Exploration</h3>
+            <p class="text-muted">Embark on journeys to diverse destinations around the world, from secluded beaches to
+              bustling cities.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="feature-icon mb-2">
+              <i class="bi bi-map fs-3"></i>
+            </div>
+            <h3 class="mb-2">Expert Guidance</h3>
+            <p class="text-muted">Benefit from the expertise of our experienced guides who ensure every aspect of your
+              journey is seamless and unforgettable.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="feature-icon mb-2">
+              <i class="bi bi-people fs-3"></i>
+            </div>
+            <h3 class="mb-2">Tailored Experiences</h3>
+            <p class="text-muted">Customize your adventure to suit your preferences, whether you seek adventure,
+              relaxation, or cultural immersion.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="parallax-1 user-select-none mt-5" id="destinations">
       <div class="travel-cont my-5 text-center">
-        <h2 class="display-1">Top <span class="text-warning">Destinations</span></h2>
+        <h2 class="display-1">Featured <span class="text-warning">Destinations</span></h2>
         <div class="divider-cont">
           <div class="divider-line"></div>
           <div class="divider-circle"></div>
@@ -359,19 +391,6 @@
           </div>
         </div>
         <div class="card">
-          <img src="../static/img/Mauritius.jpg" alt="Mauritius" loading="lazy" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h4 class="card-title">Mauritius</h4>
-            <p><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                class="bi bi-star-half"></i><i class="bi bi-star"></i></p>
-            <p><span class="fw-bold me-1">Best time to visit:</span>Throughout the year.</p>
-            <div class="d-flex align-items-center justify-content-center flex-wrap mt-5">
-              <a href="#" class="btn btn-danger me-1" target="_self" rel="noopener">Read More</a>
-              <a href="#" class="btn btn-dark">Book Now</a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
           <img src="../static/img/south-africa.jpg" alt="Cape Town" loading="lazy" class="card-img-top img-fluid">
           <div class="card-body">
             <h4 class="card-title">Cape Town - South Africa</h4>
@@ -385,7 +404,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="../static/img/australia.jpg" alt="Bali" loading="lazy" class="card-img-top img-fluid">
+          <img src="../static/img/australia.jpg" alt="Australia" loading="lazy" class="card-img-top img-fluid">
           <div class="card-body">
             <h4 class="card-title">Australia</h4>
             <p><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -462,53 +481,47 @@
         </div>
       </div>
       <div class="text-center my-4">
-        <button class="btn btn-success fw-bold">Get Started</button>
+        <a href="#" class="btn btn-success fw-bold">Get Started</a>
       </div>
     </section>
     <section id="about" class="about-sect py-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-10 mx-auto text-center text-light">
+          <div class="col-md-12 mx-auto text-center">
             <h2 class="display-4 mb-4">Welcome to PalmStar</h2>
             <p class="lead mb-4">Embark on Extraordinary Adventures with Us!</p>
-            <p class="mb-4">At PalmStar, we believe in turning travel dreams into reality. Our mission is to provide you
-              with unforgettable experiences that leave a lasting impression. With a team of dedicated experts and a
-              passion for exploration, we curate journeys that go beyond the ordinary and immerse you in the wonders of
-              the world.</p>
-            <div class="row mb-4">
+            <p class="mb-4">At PalmStar, we're passionate about turning travel dreams into unforgettable experiences. With a dedicated team and a commitment to exploration, we craft journeys that go beyond the ordinary, immersing you in the wonders of the world.</p>
+            <div class="row justify-content-center mb-4">
               <div class="col-md-4">
                 <div class="feature-icon mb-3">
                   <img src="../static/img/palm-tree-svgrepo-com.svg" alt="Palm Tree" width="60">
                 </div>
                 <h5 class="mb-2">Discover Hidden Paradises</h5>
-                <p class="text-muted">Uncover secluded beaches, enchanting forests, and captivating cultures with our
-                  carefully crafted tours.</p>
+                <p class="text-muted">Uncover secluded beaches, enchanting forests, and captivating cultures with our carefully crafted tours.</p>
               </div>
               <div class="col-md-4">
                 <div class="feature-icon mb-3">
                   <img src="../static/img/cocktail-svgrepo-com.svg" alt="Cocktail" width="60">
                 </div>
                 <h5 class="mb-2">Savor Local Delights</h5>
-                <p class="text-muted">Treat your taste buds to authentic flavors and culinary delights from around the
-                  globe, curated just for you.</p>
+                <p class="text-muted">Treat your taste buds to authentic flavors and culinary delights from around the globe, curated just for you.</p>
               </div>
               <div class="col-md-4">
                 <div class="feature-icon mb-3">
                   <img src="../static/img/camera.svg" alt="Camera" width="60">
                 </div>
                 <h5 class="mb-2">Capture Timeless Memories</h5>
-                <p class="text-muted">Preserve your adventures with stunning photographs and cherish the moments that
-                  take your breath away.</p>
+                <p class="text-muted">Preserve your adventures with stunning photographs and cherish the moments that take your breath away.</p>
               </div>
             </div>
-            <p class="mb-4">Join us as we embark on a journey of discovery, where every destination tells a story and
-              every experience leaves a mark. With PalmStar, your next adventure awaits.</p>
-            <p class="mb-5">🌟 Start Your Adventure Today with PalmStar! 🌟</p>
+            <p class="mb-4">Join us as we embark on a journey of discovery, where every destination tells a story and every experience leaves a mark. Your next adventure awaits with PalmStar.</p>
+            <p class="mb-5"><span class="star">&#11088;</span> Start Your Adventure Today with PalmStar! <span class="star">&#11088;</span></p>
           </div>
         </div>
       </div>
     </section>
-    <section class="container" id="Testimonials">
+    
+    <section class="container pt-5" id="Testimonials">
       <h5 class="display-4 text-center my-4">What <span class="text-warning">Our Customers</span> Are Saying</h5>
       <div class="divider-cont mb-4">
         <div class="divider-line"></div>
@@ -698,13 +711,13 @@
         <div class="col-12 col-md-3 social-icons">
           <div class="d-flex justify-content-around align-items-center">
             <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="text-black"><i
-                class="bi bi-facebook fs-4 text-primary"></i></a>
+                class="bi bi-facebook fs-5 text-primary"></i></a>
             <a href="https://www.twitter.com/" target="_blank" rel="noopener" class="text-black"><i
-                class="bi bi-twitter fs-4 text-info"></i></a>
+                class="bi bi-twitter fs-5 text-info"></i></a>
             <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="text-black"><i
                 class="bi bi-instagram fs-5 ig px-1 rounded"></i></a>
             <a href="https://www.pinterest.com" target="_blank" rel="noopener" class="text-black"><i
-                class="bi bi-pinterest fs-4 text-danger"></i></a>
+                class="bi bi-pinterest fs-5 text-danger"></i></a>
           </div>
         </div>
       </div>
