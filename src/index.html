@@ -18,8 +18,8 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top shadow-lg" aria-label="Main navigation">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="../static/img/palmstar-logo.png" alt="logo" loading="lazy" class="me-1"
-          width="35px" height="25px">PalmStar</a>
+      <a class="navbar-brand" href="#"><img src="../static/img/palmstar-logo.png" alt="logo" loading="lazy"
+          class="me-1 brand-logo" width="35px" height="25px">PalmStar</a>
       <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,7 +29,7 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Destinations</a>
+            <a class="nav-link" href="#destinations">Destinations</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Packages</a>
@@ -50,80 +50,6 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-warning" type="submit"><i class="bi bi-search"></i></button>
         </form>
-        <button type="button" class="btn btn-primary book-now" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-          Book Now
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">PalmStar Booking</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <form action="" method="get" class="form-group">
-                  <div class=" mb-4">
-                    <div class="d-flex input-group">
-                      <label for="fname" class="input-group-text">First name</label>
-                      <input type="text" aria-label="First name" class="form-control" id="fname" placeholder="John..."
-                        required>
-                    </div>
-                    <div class="d-flex input-group my-3">
-                      <label for="lname" class="input-group-text">Last Name </label>
-                      <input type="text" aria-label="Last name" class="form-control" id="lname" placeholder="Doe...">
-                    </div>
-                    <div class="input-group d-flex">
-                      <label for="email" class="input-group-text">@</label>
-                      <input type="email" class="form-control" aria-label="email" id="email"
-                        placeholder="user@example.com" required>
-                    </div>
-                  </div>
-                  <label class="fw-bold input-group-text">Location</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select...</option>
-                    <option value="1">Belize</option>
-                    <option value="2">Tahiti</option>
-                    <option value="3">Kenya</option>
-                    <option value="4">Costa Rica</option>
-                    <option value="5">Indonesia</option>
-                    <option value="6">Maldives</option>
-                    <option value="7">Turkey</option>
-                    <option value="8">Greece</option>
-                    <option value="9">Hawaii</option>
-                    <option value="10">Italy</option>
-                    <option value="11">South Africa</option>
-                  </select>
-                  <div class="mt-4">
-                    <h5 class="fw-bold input-group-text">Guests and Rooms</h5>
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected>Select...</option>
-                      <option value="1">1 Guest, 1 Room</option>
-                      <option value="2">2 Guests, 1 Room</option>
-                      <option value="3">2 Guests, 2 Rooms</option>
-                      <option value="4">3 Guests, 3 Rooms</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label for class="mt-4 fw-bold input-group-text">Check-in date</label>
-                    <input type="date" name="check-in-date" id="checkin-date" class="form-control">
-                  </div>
-                  <div>
-                    <label for class="mt-4 fw-bold input-group-text">Check-out date</label>
-                    <input type="date" name="check-out-date" id="checkout-date" class="form-control">
-                  </div>
-                </form>
-
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-outline-success">Confirm</button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </nav>
@@ -170,7 +96,7 @@
         </div>
       </div>
       <div class="hero-overlay d-flex align-items-center justify-content-center">
-        <div class="hero-content text-center">
+        <div class="hero-content text-center mt-4">
           <h1 class="display-1 text-warning fw-bold mt-5 text-shadow">Your Passport to Adventure</h1>
           <p class="my-4 hero-quote lead text-shadow">Embark on extraordinary journeys,
             create
@@ -183,7 +109,7 @@
           </div>
         </div>
       </div>
-      
+
 
     </section>
     <section class="container user-select-none mt-5">
@@ -445,10 +371,10 @@
       <div class="">
         <h3 class="display-3 text-center"><span class="text-primary">Car</span> <span class="text-warning">Rental</span>
         </h3>
-        <h4 class="mt-5 text-dark text-center">Connecting you to the biggest brands in car rentals</h4>
+        <h4 class="mt-4 text-dark text-center">Connecting you to the biggest brands in car rentals</h4>
       </div>
 
-      <div class="rentals-cont my-5">
+      <div class="rentals-cont my-4">
         <img src="../static/img/alamo.png" alt="alamo car rental" srcset="" class="rent-img shadow">
         <img src="../static/img/goldcar.png" alt="goldcar car rental" class="rent-img shadow">
         <img src="../static/img/megadrive.jpeg" alt="" class="rent-img shadow">
@@ -457,7 +383,7 @@
         <img src="../static/img/mediaeasirent.jpg" alt="" class="rent-img shadow">
         <img src="../static/img/europcar.png" alt="" class="rent-img shadow">
       </div>
-      <div class="row mt-5 align-items-center">
+      <div class="row mt-5 align-items-center usp">
         <div class="col-md-4 d-flex align-items-center">
           <img src="../static/img/usp_calendar@1x.png" alt="">
           <div class="d-flex flex-column ms-3">
@@ -490,37 +416,44 @@
           <div class="col-md-12 mx-auto text-center">
             <h2 class="display-4 mb-4">Welcome to PalmStar</h2>
             <p class="lead mb-4">Embark on Extraordinary Adventures with Us!</p>
-            <p class="mb-4">At PalmStar, we're passionate about turning travel dreams into unforgettable experiences. With a dedicated team and a commitment to exploration, we craft journeys that go beyond the ordinary, immersing you in the wonders of the world.</p>
+            <p class="mb-4">At PalmStar, we're passionate about turning travel dreams into unforgettable experiences.
+              With a dedicated team and a commitment to exploration, we craft journeys that go beyond the ordinary,
+              immersing you in the wonders of the world.</p>
             <div class="row justify-content-center mb-4">
               <div class="col-md-4">
                 <div class="feature-icon mb-3">
                   <img src="../static/img/palm-tree-svgrepo-com.svg" alt="Palm Tree" width="60">
                 </div>
                 <h5 class="mb-2">Discover Hidden Paradises</h5>
-                <p class="text-muted">Uncover secluded beaches, enchanting forests, and captivating cultures with our carefully crafted tours.</p>
+                <p class="text-muted">Uncover secluded beaches, enchanting forests, and captivating cultures with our
+                  carefully crafted tours.</p>
               </div>
               <div class="col-md-4">
                 <div class="feature-icon mb-3">
                   <img src="../static/img/cocktail-svgrepo-com.svg" alt="Cocktail" width="60">
                 </div>
                 <h5 class="mb-2">Savor Local Delights</h5>
-                <p class="text-muted">Treat your taste buds to authentic flavors and culinary delights from around the globe, curated just for you.</p>
+                <p class="text-muted">Treat your taste buds to authentic flavors and culinary delights from around the
+                  globe, curated just for you.</p>
               </div>
               <div class="col-md-4">
                 <div class="feature-icon mb-3">
                   <img src="../static/img/camera.svg" alt="Camera" width="60">
                 </div>
                 <h5 class="mb-2">Capture Timeless Memories</h5>
-                <p class="text-muted">Preserve your adventures with stunning photographs and cherish the moments that take your breath away.</p>
+                <p class="text-muted">Preserve your adventures with stunning photographs and cherish the moments that
+                  take your breath away.</p>
               </div>
             </div>
-            <p class="mb-4">Join us as we embark on a journey of discovery, where every destination tells a story and every experience leaves a mark. Your next adventure awaits with PalmStar.</p>
-            <p class="mb-5"><span class="star">&#11088;</span> Start Your Adventure Today with PalmStar! <span class="star">&#11088;</span></p>
+            <p class="mb-4">Join us as we embark on a journey of discovery, where every destination tells a story and
+              every experience leaves a mark. Your next adventure awaits with PalmStar.</p>
+            <p class="mb-5"><span class="star">&#11088;</span> Start Your Adventure Today with PalmStar! <span
+                class="star">&#11088;</span></p>
           </div>
         </div>
       </div>
     </section>
-    
+
     <section class="container pt-5" id="Testimonials">
       <h5 class="display-4 text-center my-4">What <span class="text-warning">Our Customers</span> Are Saying</h5>
       <div class="divider-cont mb-4">
@@ -529,7 +462,7 @@
         <div class="divider-line"></div>
       </div>
       <div class="testimonial-cont">
-        <div class="testimony border py-2 px-3 glass-effect">
+        <div class="testimony border py-2 px-2 glass-effect">
           <div class="card-body">
             <p class="text-primary"><i class="bi bi-patch-check me-1 text-primary"></i>Verified customer</p>
             <p class="card-text text-wrap">Travel far enough, you meet yourself... and PalmStar.</p>
@@ -539,7 +472,7 @@
             </div>
           </div>
         </div>
-        <div class="testimony border py-2 px-3 glass-effect">
+        <div class="testimony border py-2 px-2 glass-effect">
           <div class="card-body">
             <p class="text-primary"><i class="bi bi-patch-check  me-1 text-primary"></i>Verified customer</p>
             <p class="card-text text-wrap">Welcome to Palmstar! We make big waves out of small dreams. Join us in our
@@ -551,7 +484,7 @@
             </div>
           </div>
         </div>
-        <div class="testimony border py-2 px-3 glass-effect">
+        <div class="testimony border py-2 px-2 glass-effect">
           <div class="card-body">
             <p class="text-primary"><i class="bi bi-patch-check  me-1 text-primary"></i>Verified customer</p>
             <p class="card-text text-wrap">There are two kinds of travel: first class and with children.</p>
@@ -561,7 +494,7 @@
             </div>
           </div>
         </div>
-        <div class="testimony border py-2 px-3 glass-effect">
+        <div class="testimony border py-2 px-2 glass-effect">
           <div class="card-body">
             <p class="text-primary"><i class="bi bi-patch-check me-1 text-primary"></i>Verified customer</p>
             <p class="card-text text-wrap">I've recommended PalmStar to all my friends and family. They truly make
@@ -573,7 +506,7 @@
             </div>
           </div>
         </div>
-        <div class="testimony border py-2 px-3 glass-effect">
+        <div class="testimony border py-2 px-2 glass-effect">
           <div class="card-body">
             <p class="text-primary"><i class="bi bi-patch-check  me-1 text-primary"></i>Verified customer</p>
             <p class="card-text">Our love is International. Thanks to PalmStar!</p>
@@ -583,7 +516,7 @@
             </div>
           </div>
         </div>
-        <div class="testimony border py-2 px-3 glass-effect">
+        <div class="testimony border py-2 px-2 glass-effect">
           <div class="">
             <p class="text-primary"><i class="bi bi-patch-check  me-1 text-primary"></i>Verified customer</p>
             <p class="card-text">The proof is in the name. Wink! Wink!</p>
@@ -593,7 +526,7 @@
             </div>
           </div>
         </div>
-        <div class="testimony border py-2 px-3 glass-effect">
+        <div class="testimony border py-2 px-2 glass-effect">
           <div class="">
             <p class="text-primary"><i class="bi bi-patch-check me-1 text-primary"></i>Verified customer</p>
             <p class="text-wrap">Absolutely blown away by the personalized service and attention to detail!
@@ -605,7 +538,7 @@
             </div>
           </div>
         </div>
-        <div class="testimony py-2 px-3 border glass-effect">
+        <div class="testimony py-2 px-2 border glass-effect">
           <div class="">
             <p class="text-primary"><i class="bi bi-patch-check me-1 text-primary"></i>Verified customer</p>
             <p class="card-text text-wrap">I've been on many tours, but none quite like PalmStar's. They truly know how
@@ -618,7 +551,7 @@
           </div>
         </div>
 
-        <div class="testimony border py-2 px-3 glass-effect">
+        <div class="testimony border py-2 px-2 glass-effect">
           <div class="card-body">
             <p class="text-primary"><i class="bi bi-patch-check me-1 text-primary"></i>Verified customer</p>
             <p class="card-text text-wrap">Booking with PalmStar was the best decision I made for my vacation. Their
@@ -636,6 +569,79 @@
       </div>
     </section>
   </main>
+  <button type="button" class="btn btn-primary book-now" data-bs-toggle="modal" data-bs-target="#bookingModal">
+    Book Now
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="bookingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 fw-bold" id="bookingModalLabel">Book Your Adventure with PalmStar</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="" method="get" class="form-group">
+            <div class="mb-4">
+              <div class="input-group">
+                <label for="fname" class="input-group-text">First Name</label>
+                <input type="text" aria-label="First name" class="form-control" id="fname" placeholder="John" required>
+              </div>
+              <div class="input-group mt-3">
+                <label for="lname" class="input-group-text">Last Name</label>
+                <input type="text" aria-label="Last name" class="form-control" id="lname" placeholder="Doe" required>
+              </div>
+              <div class="input-group mt-3">
+                <label for="email" class="input-group-text">Email</label>
+                <input type="email" class="form-control" aria-label="Email" id="email" placeholder="user@example.com" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="location" class="form-label fw-bold">Select Location</label>
+              <select class="form-select" id="location" aria-label="Select Location" required>
+                <option selected disabled value="">Choose...</option>
+                <option value="1">Belize</option>
+                <option value="2">Tahiti</option>
+                <option value="3">Kenya</option>
+                <option value="4">Costa Rica</option>
+                <option value="5">Indonesia</option>
+                <option value="6">Maldives</option>
+                <option value="7">Turkey</option>
+                <option value="8">Greece</option>
+                <option value="9">Hawaii</option>
+                <option value="10">Italy</option>
+                <option value="11">South Africa</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="guests" class="form-label fw-bold">Guests and Rooms</label>
+              <select class="form-select" id="guests" aria-label="Select Guests and Rooms" required>
+                <option selected disabled value="">Choose...</option>
+                <option value="1">1 Guest, 1 Room</option>
+                <option value="2">2 Guests, 1 Room</option>
+                <option value="3">2 Guests, 2 Rooms</option>
+                <option value="4">3 Guests, 3 Rooms</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="checkin-date" class="form-label fw-bold">Check-in Date</label>
+              <input type="date" class="form-control" id="checkin-date" required>
+            </div>
+            <div class="mb-3">
+              <label for="checkout-date" class="form-label fw-bold">Check-out Date</label>
+              <input type="date" class="form-control" id="checkout-date" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-outline-success">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <footer class="bg-light">
     <section class="container">
       <div class="row mb-5 pt-4">
@@ -706,18 +712,18 @@
       </div>
       <div class="row pt-3 border-top flex-column-reverse flex-md-row">
         <div class="col-12 col-md-9 ">
-          <p>Copyright &copy; 2024. PalmStar Inc. All Rights Reserved.</p>
+          <p>&copy; 2024. PalmStar Inc. All Rights Reserved.</p>
         </div>
         <div class="col-12 col-md-3 social-icons">
           <div class="d-flex justify-content-around align-items-center">
             <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="text-black"><i
-                class="bi bi-facebook fs-5 text-primary"></i></a>
+                class="bi bi-facebook fs-5"></i></a>
             <a href="https://www.twitter.com/" target="_blank" rel="noopener" class="text-black"><i
-                class="bi bi-twitter fs-5 text-info"></i></a>
+                class="bi bi-twitter fs-5"></i></a>
             <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="text-black"><i
-                class="bi bi-instagram fs-5 ig px-1 rounded"></i></a>
+                class="bi bi-instagram fs-5 px-1 rounded"></i></a>
             <a href="https://www.pinterest.com" target="_blank" rel="noopener" class="text-black"><i
-                class="bi bi-pinterest fs-5 text-danger"></i></a>
+                class="bi bi-pinterest fs-5 text-reset"></i></a>
           </div>
         </div>
       </div>

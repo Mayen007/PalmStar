@@ -41,7 +41,11 @@ html {
   align-items: end;
   flex-wrap: wrap;
   column-gap: 10px;
-  row-gap: 10px;
+  row-gap: 18px;
+}
+
+.usp {
+  row-gap: 15px;
 }
 
 .travel-cont {
@@ -50,14 +54,14 @@ html {
   align-items: center;
 }
 
-.ig {
+/* .ig {
   background: radial-gradient(circle at 30% 110%, #ffdb8b 0%,
       #ee653d 25%,
       #d42e81 50%,
       #a237b6 75%,
       #3e57bc 100%);
   color: #fff;
-}
+} */
 
 .divider-cont {
   justify-content: center;
@@ -198,10 +202,12 @@ span {
 .testimony {
   display: inline-block;
   margin-right: 20px;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: transform 0.3s ease;
-  max-width: 380px !important;
-  height: 100%;
+  max-width: 390px !important;
+  height: auto;
 }
 
 .scroll-prompt {
@@ -215,10 +221,10 @@ span {
   row-gap: 20px;
 }
 
-@media (min-width: 992px) {
-  .book-now {
-    margin-left: 40px;
-  }
+.book-now {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
 }
 
 @media (max-width: 991.98px) {
@@ -240,14 +246,6 @@ span {
     visibility: visible;
     transform: translateX(-100%);
   }
-
-  .book-now {
-    margin-top: 16pt;
-    position: absolute;
-    margin-left: 10px;
-    left: 2px;
-    top: 70%;
-  }
 }
 
 @media (max-width: 767px) {
@@ -262,4 +260,11 @@ span {
 
 .text-shadow {
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 254px) {
+  .brand-logo {
+    display: none;
+  }
+
 }
