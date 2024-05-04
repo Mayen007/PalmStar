@@ -268,3 +268,10 @@ span {
   }
 
 }
+
+@media (max-width: 541px) {
+  .book-now {
+    position: fixed;
+    bottom: 85px;
+  }
+}
