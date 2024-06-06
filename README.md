@@ -21,6 +21,6 @@ We welcome contributions from the community to help us improve and expand our of
 ##### License
 This project is licensed under the MIT License.
 
-###### Contact Us
+##### Contact Us
 For any inquiries or assistance, please contact us at <<insert contact email>> or visit our << make this a hyperlink contact page>>.
 
