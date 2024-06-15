@@ -9,35 +9,12 @@ function scrollToTop() {
   });
 }
 
-// Function to show/hide the button based on scroll position
-function handleScroll() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    backToTopButton.style.display = "block";
-  } else {
-    backToTopButton.style.display = "none";
-  }
-}
-
-// Add event listener to trigger the handleScroll function when the user scrolls
-window.addEventListener('scroll', handleScroll);
-
-const bookingModal = document.getElementById('bookingModal');
-bookingModal.addEventListener('show.bs.modal', function (event) {
-  const button = event.relatedTarget;
-  const destination = button.getAttribute('data-destination');
-
-  const selectedDestinationInput = bookingModal.querySelector('#selected-destination');
-  selectedDestinationInput.value = destination;
-
-  const destinationSelect = bookingModal.querySelector('#destination');
-  destinationSelect.value = destination;
-});
-
-
 // Get references to elements
 const chatIcon = document.getElementById("chat-icon");
 const chatWindow = document.getElementById("chat-window");
 const heroSection = document.getElementById("home");
+const userInputField = document.getElementById("user-input");
+const sendButton = document.getElementById("send-button");
 
 // Function to show/hide icon based on scroll position
 function handleScroll() {
@@ -62,6 +39,9 @@ function toggleChatWindow() {
   if (chatWindow.style.display === "none" || chatWindow.style.display === "") {
     chatWindow.style.display = "block";
     chatIcon.style.display = "none";
+
+    // Send welcome message ONLY when the chat window is opened
+    sendWelcomeMessage();
   } else {
     chatWindow.style.display = "none";
     // Show the icon if the user is not on the hero section
@@ -72,80 +52,118 @@ function toggleChatWindow() {
     }
   }
 }
-// Function to send the message and handle the response
-function sendMessage() {
-  const userInput = document.getElementById("user-input").value;
-  if (userInput.trim() !== '') {
-    // Add user message to the chat body
-    addToChat("user", userInput);
 
-    // Get response from your chatbot backend (replace with your actual implementation)
-    getBotResponse(userInput)
-      .then(response => {
-        // Add bot's response to the chat body
-        addToChat("bot", response);
-      })
-      .catch(error => {
-        // Handle errors (e.g., display an error message)
-        console.error(error);
-        addToChat("bot", "Sorry, I'm having trouble understanding. Please try again later.");
-      });
-
-    // Clear input field
-    document.getElementById("user-input").value = '';
-  }
+// Function to send the welcome message
+function sendWelcomeMessage() {
+  addToChat("bot", "Welcome to PalmStar! How can I help you plan your dream vacation?");
 }
 
-// Function to add message to chat
+// Function to add messages to the chat
 function addToChat(sender, message) {
-  const chatBody = document.querySelector('.chat-body');
-  const messageElement = document.createElement('div');
-  messageElement.classList.add('message', sender);
-
-  // Handle messages with links
-  if (message.includes("<a href=")) {
-    messageElement.innerHTML = message; // Set as innerHTML to render the link
-  } else {
-    messageElement.textContent = message; // Set as textContent for regular messages
-  }
-
+  const chatBody = document.querySelector(".chat-body");
+  const messageElement = document.createElement("div");
+  messageElement.classList.add("message", sender === "bot" ? "bot" : "user");
+  messageElement.textContent = message;
   chatBody.appendChild(messageElement);
-
-  // Scroll to the bottom of the chat
-  chatBody.scrollTop = chatBody.scrollHeight;
+  chatBody.scrollTop = chatBody.scrollHeight; // Scroll to the bottom
 }
 
-// Placeholder function to simulate getting a bot response
+// Function to send a message
+function sendMessage() {
+  const userInput = userInputField.value;
+  if (userInput.trim() !== "") {
+    addToChat("user", userInput);
+    userInputField.value = "";
+    getBotResponse(userInput).then(response => {
+      addToChat("bot", response);
+    });
+  }
+}
+
+// Placeholder function to simulate getting a bot response (replace with your actual chatbot API call)
 function getBotResponse(userInput) {
   return new Promise((resolve, reject) => {
-    // Replace with your actual chatbot API call
     setTimeout(() => {
-      const defaultResponse = "Welcome to PalmStar! How can I help you plan your dream vacation? <a href='#destinations'>Explore our destinations</a> or <a href='#packages'>view our packages</a>.";
-      resolve(defaultResponse);
+      resolve("How can I be of help?"); // Replace with your actual chatbot logic
     }, 1000); // Simulate a 1-second delay
   });
 }
-function addToChat(sender, message) {
-  const chatBody = document.querySelector('.chat-body');
-  const messageElement = document.createElement('div');
-  messageElement.classList.add('message', sender);
-
-  // Handle messages with links
-  if (message.includes("<a href=")) {
-    messageElement.innerHTML = message;
-  } else {
-    messageElement.textContent = message;
-  }
-
-  chatBody.appendChild(messageElement);
-
-  // Scroll to the bottom only if the user is already at the bottom or near it
-  if (chatBody.scrollTop >= chatBody.scrollHeight - chatBody.clientHeight - 10) {
-    chatBody.scrollTop = chatBody.scrollHeight;
-  }
-}
-
 
 // Add event listeners
-window.addEventListener('scroll', handleScroll); // Show/hide on scroll
-handleScroll(); // Initial check on page load
+window.addEventListener('scroll', handleScroll);
+handleScroll();
+sendButton.addEventListener('click', sendMessage);
+userInputField.addEventListener('keypress', function(event) {
+  if (event.key === "Enter") {
+    sendMessage();
+  }
+});
+
+
+
+const testimonialSlider = document.getElementById('testimonialSlider');
+const testimonialDots = document.getElementById('testimonialDots');
+const testimonialCards = testimonialSlider.querySelectorAll('.testimonial-card');
+
+// Generate Dots dynamically
+testimonialCards.forEach((_, index) => {
+  const dot = document.createElement('span');
+  dot.classList.add('dot');
+  if (index === 0) {
+    dot.classList.add('active');
+  }
+  dot.addEventListener('click', () => {
+    scrollToCard(index);
+  });
+  testimonialDots.appendChild(dot);
+});
+
+function scrollToCard(index) {
+  const cardWidth = testimonialCards[0].offsetWidth + 30; // 30 for margin
+  testimonialSlider.scrollLeft = cardWidth * index;
+  updateActiveDot(index);
+}
+
+function scrollToCard(index) {
+  const cardWidth = testimonialCards[0].offsetWidth + 30; // 30 for margin
+  testimonialSlider.scrollLeft = cardWidth * index;
+  updateActiveDot(index);
+  // Stop automatic scrolling when a dot is clicked
+  clearInterval(autoScrollInterval);
+}
+
+function updateActiveDot(index) {
+  const dots = testimonialDots.querySelectorAll('.dot');
+  dots.forEach((dot) => {
+    dot.classList.remove('active'); // Reset active class for all dots
+  });
+  dots[index].classList.add('active'); // Set active class for the new dot
+}
+
+// Automatic scroll (Optional)
+let currentCard = 0;
+let autoScrollInterval;
+
+function startAutoScroll() {
+  autoScrollInterval = setInterval(() => {
+    currentCard = (currentCard + 1) % testimonialCards.length;
+    scrollToCard(currentCard);
+  }, 4000); // Change card every 5 seconds
+}
+
+// Start the auto scroll when the page loads
+startAutoScroll();
+
+testimonialSlider.addEventListener('scroll', () => {
+  // Calculate the current card based on scroll position
+  const cardWidth = testimonialCards[0].offsetWidth + 30;
+  const scrollLeft = testimonialSlider.scrollLeft;
+  const newCurrentCard = Math.round(scrollLeft / cardWidth);
+
+  // Update active dot only if the current card has changed
+  if (newCurrentCard !== currentCard) {
+    currentCard = newCurrentCard;
+    updateActiveDot(currentCard);
+  }
+}); 
+

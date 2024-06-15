@@ -18,7 +18,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top shadow-lg" aria-label="Main navigation">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.html">
         <img src="../static/img/palmstar-logo.png" alt="logo" loading="lazy" class="me-1 brand-logo rounded"
           width="35px" height="25px">PalmStar
       </a>
@@ -59,7 +59,6 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Login/Sign Up</a></li>
             </ul>
           </li>
         </ul>
@@ -539,13 +538,13 @@
       </div>
     </section>
 
-    <section id="testimonials" class="py-5 bg-light">
+    <section id="testimonials" class="py-5">
       <div class="container">
         <h2 class="display-4 mb-4 text-center">Our Travelers Speak</h2>
         <p class="lead mb-5 text-center">Hear firsthand accounts of the extraordinary experiences PalmStar creates.</p>
 
-        <div class="testimonial-container d-flex overflow-auto py-3">
-          <div class="testimonial-card p-3 shadow-lg rounded-3 mx-3 ">
+        <div class="testimonial-container d-flex py-3" id="testimonialSlider">
+          <div class="testimonial-card p-3 shadow-lg rounded-3 mx-3">
             <i class="bi bi-quote quote-icon text-warning mb-3"></i>
             <p class="testimonial-text">“PalmStar transformed our honeymoon into a magical journey. The attention to
               detail was impeccable, and every moment felt like a dream come true.”</p>
@@ -594,8 +593,27 @@
             <footer class="blockquote-footer mt-3">Mahira</footer>
             <cite title="Source Title">Solo Traveler, Machu Picchu Trek</cite>
           </div>
+          <div class="testimonial-card p-3 shadow-lg rounded-3 mx-3 ">
+            <i class="bi bi-quote quote-icon text-warning mb-3"></i>
+            <p class="testimonial-text">
+              "PalmStar's commitment to sustainable tourism impressed us. Our eco-lodge in Costa Rica was stunning, and
+              the conservation efforts were truly inspiring."
+            </p>
+            <footer class="blockquote-footer mt-3">Olivia & Noah</footer>
+            <cite title="Source Title">Eco-Travelers, Costa Rica Eco-Adventure</cite>
+          </div>
+
+          <div class="testimonial-card p-3 shadow-lg rounded-3 mx-3 ">
+            <i class="bi bi-quote quote-icon text-warning mb-3"></i>
+            <p class="testimonial-text">
+              "PalmStar planned a surprise birthday trip for my husband that was beyond amazing. He was thrilled with
+              the hot air balloon ride over the vineyards in Napa Valley!"
+            </p>
+            <footer class="blockquote-footer mt-3">Ava</footer>
+            <cite title="Source Title">Surprise Planner, Napa Valley Getaway</cite>
+          </div>
         </div>
-      </div>
+        <div class="dots-container text-center mt-4" id="testimonialDots"></div>
       </div>
     </section>
 
@@ -735,11 +753,11 @@
       <div class="row mt-4">
         <div class="col-12 text-center">
           <p>&copy; 2024 PalmStar Inc. All Rights Reserved.</p>
-          <button onclick="scrollToTop()" id="myBtn" title="Go to top" class="btn btn-warning btn-sm">
-            <i class="bi bi-arrow-up"></i>
-          </button>
         </div>
       </div>
+      <button onclick="scrollToTop()" id="myBtn" title="Go to top" class="btn btn-warning">
+        <i class="bi bi-arrow-up"></i>
+      </button>
     </div>
   </footer>
   <div class="modal fade" id="footerBookingModal" tabindex="-1" aria-labelledby="footerBookingModalLabel"
@@ -833,18 +851,19 @@
   </div>
 
   <div id="chat-window" class="chat-window">
-    <div class="chat-header about-sect">
-      <img src="../static/img/palmstar-logo.png" height="200px" alt="PalmStar Logo" class="img-fluid">
-      <h5>PalmStar Travel Assistant</h5>
+    <div class="chat-header about-sect d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center">
+        <img src="../static/img/palmstar-logo.png" height="200px" alt="PalmStar Logo" class="img-fluid me-2 rounded-2">
+        <h5>PalmStar Travel Assistant</h5>
+      </div>
       <div class="close-button-container">
         <button class="btn-close" title="Close" onclick="toggleChatWindow()"></button>
       </div>
     </div>
-    <div class="chat-body">
-    </div>
+    <div class="chat-body"></div>
     <div class="chat-input">
       <input type="text" id="user-input" placeholder="Type your message...">
-      <button id="send-button" onclick="sendMessage()" title="Send"><i class="bi bi-send"></i></button>
+      <button type="button" id="send-button" onclick="sendMessage()"><i class="bi bi-send"></i></button>
     </div>
   </div>
 
