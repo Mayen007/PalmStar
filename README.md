@@ -13,7 +13,7 @@ Savor Local Delights: Indulge your taste buds with authentic flavors and culinar
 Capture Timeless Memories: Preserve your adventures with stunning photographs and cherish the moments that take your breath away.
 
 #### Getting Started
-To start exploring with Palmstar, simply visit our website at << insert company website link >> Browse our selection of tours, customize your itinerary, and book your next adventure with ease.
+To start exploring with Palmstar, simply visit our website at <a href="https://palmstar.onrender.com" >PalmStar</a> Browse our selection of tours, customize your itinerary, and book your next adventure with ease.
 
 #### Contributing
 We welcome contributions from the community to help us improve and expand our offerings. If you have ideas for new tours, feedback on existing ones, or would like to collaborate, please reach out to us at << insert contact email >>.
