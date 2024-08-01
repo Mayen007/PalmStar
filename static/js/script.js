@@ -93,7 +93,7 @@ function getBotResponse(userInput) {
 window.addEventListener('scroll', handleScroll);
 handleScroll();
 sendButton.addEventListener('click', sendMessage);
-userInputField.addEventListener('keypress', function(event) {
+userInputField.addEventListener('keypress', function (event) {
   if (event.key === "Enter") {
     sendMessage();
   }
@@ -165,5 +165,29 @@ testimonialSlider.addEventListener('scroll', () => {
     currentCard = newCurrentCard;
     updateActiveDot(currentCard);
   }
-}); 
+});
 
+function openTab(event, tabName) {
+  let i, tabcontent, tablinks;
+
+  // Hide all tab content
+  tabcontent = document.getElementsByClassName("tab-content");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].classList.remove("active");
+  }
+
+  // Remove the active class from all tab buttons
+  tablinks = document.getElementsByClassName("tab");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab content and add the active class to the button that opened the tab
+  document.getElementById(tabName).classList.add("active");
+  event.currentTarget.className += " active";
+}
+
+// Set the default tab to be open
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementsByClassName("tab")[0].click();
+});

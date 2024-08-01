@@ -2,10 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-h2 {
-  font-family: 'Playfair Display', serif;
-}
-
 .hero-section {
   position: relative;
   width: 100%;
@@ -130,7 +126,7 @@ h2 {
 }
 
 .testimonial-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-15px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
@@ -254,7 +250,7 @@ h2 {
 }
 
 .btn-close {
-  color: #fff;
+  color: #fff !important;
 }
 
 .message {
@@ -280,7 +276,8 @@ h2 {
 
 #contact .card {
   border: none;
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Semi-transparent white */
 }
 
 .contact-info {

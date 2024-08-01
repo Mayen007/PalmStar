@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - PalmStar</title>
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="shortcut icon" href="../static/img/palmstar-logo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .tab-container {
+      display: flex;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      justify-content: center;
+    }
+
+    .tab {
+      background-color: #ddd;
+      border: 1px solid #ddd;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      text-align: center;
+      outline: none;
+      border-bottom: none;
+      transition: background-color 0.3s, border-radius 0.3s;
+    }
+
+    .tab:first-child {
+      border-top-right-radius: 8px;
+    }
+
+    .tab:last-child {
+      border-top-left-radius: 8px;
+    }
+
+    .tab:hover {
+      background-color: #ccc;
+    }
+
+    .tab.active {
+      background-color: #fff;
+      border-bottom: 2px solid #fff;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      margin-bottom: 15px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .tab-container>.active {
+      background: linear-gradient(50deg, #03d1ff, #0064fb, #0460ea, #0064fb);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <img src="../static/img/palmstar-logo.png" alt="Company Logo" class="logo text-center">
+    </header>
+    <section class="tab-container">
+      <button class="tab active" onclick="openTab(event, 'login')">Login</button>
+      <button class="tab" onclick="openTab(event, 'signup')">Signup</button>
+    </section>
+    <section id="login" class="tab-content active">
+      <h2 class="text-center fw-bold">Welcome Back</h2>
+      <p class="text-center mt-3 mb-4">Login to your account to continue exploring our exclusive tours.</p>
+      <form id="loginForm">
+        <div class="form-group">
+          <input type="email" id="loginEmail" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+        </div>
+        <label for="remember" class="form-check-label my-2">
+          <input type="checkbox" name="remember-me" id="remember" class="form-check-input"> Remember Me
+        </label>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+    <section id="signup" class="tab-content">
+      <h2 class="text-center fw-bold">Join the Club</h2>
+      <p class="text-center mb-4">Sign up for a world of premium tours and exclusive offers.</p>
+      <form id="signupForm">
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="signupEmail" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="signupPassword" name="password" placeholder="Password" required>
+        </div>
+        <label for="terms" class="form-check-label text-secondary">
+          <input type="checkbox" name="terms" id="terms" class="form-check-input"> I accept <a href="http://"
+            class="text-decoration-none">terms and
+            conditions</a>
+        </label>
+        <button type="submit">Sign Up</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="../static/js/script.js"></script>
+</body>
+
+</html>
