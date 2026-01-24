@@ -1,883 +1,1604 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to PalmStar, your premier travel agency for unforgettable adventures and exclusive deals. Discover hidden paradises, savor local delights, and capture timeless memories with our expertly crafted tours. Book your next adventure online today."
+    />
+    <link rel="stylesheet" href="./static/css/styles.css" />
+    <title>PalmStar - Tour Company</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="./static/img/palmstar-logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <meta
+      name="google-site-verification"
+      content="xxm15zNSKPA8wpHFqYnHPLd1DtZzqBgq3MmapDrGEF4"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Welcome to PalmStar, your premier travel agency for unforgettable adventures and exclusive deals. Discover hidden paradises, savor local delights, and capture timeless memories with our expertly crafted tours. Book your next adventure online today.">
-  <link rel="stylesheet" href="./static/css/styles.css">
-  <title>PalmStar - Tour Company</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="shortcut icon" href="./static/img/palmstar-logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <meta name="google-site-verification" content="xxm15zNSKPA8wpHFqYnHPLd1DtZzqBgq3MmapDrGEF4" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top shadow-lg" aria-label="Main navigation">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="./index.html">
-        <img src="../static/img/palmstar-logo.png" alt="logo" loading="lazy" class="me-1 brand-logo rounded"
-          width="35px" height="25px">PalmStar
-      </a>
-      <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Explore
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#destinations">Destinations</a></li>
-              <li><a class="dropdown-item" href="#packages">Packages</a></li>
-              <li><a class="dropdown-item" href="#adventures">Adventures</a></li>
-              <li><a class="dropdown-item" href="./src/blog.html">Blog</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./src/contact.html">Contact</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Account
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">My Trips</a></li>
-              <li><a class="dropdown-item" href="#">Preferences</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="./src/login.html">Login</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <main>
-    <section id="home" class="hero-section user-select-none">
-      <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./static/img/bali.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./static/img/maasai-mara.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./static/img/limestone-rock-phang-nga.webp" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./static/img/PHI-PHI-ISLANDS.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./static/img/tahiti.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./static/img/rayyu-maldives.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./static/img/maldives.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./static/img/moosa-haleem.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./static/img/raja_ampat_indonesia.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./static/img/Mauritius_hero.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./static/img/IMG_3289.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./static/img/costa-rica.jpg" class="d-block w-100" alt="...">
-          </div>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top shadow-lg"
+      aria-label="Main navigation"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="../static/img/palmstar-logo.png"
+            alt="logo"
+            loading="lazy"
+            class="me-1 brand-logo rounded"
+            width="35px"
+            height="25px"
+          />PalmStar
+        </a>
+        <button
+          class="navbar-toggler p-0 border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Explore
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a class="dropdown-item" href="#destinations">Destinations</a>
+                </li>
+                <li><a class="dropdown-item" href="#packages">Packages</a></li>
+                <li>
+                  <a class="dropdown-item" href="#adventures">Adventures</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./src/blog.html">Blog</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./src/contact.html">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Account
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">My Trips</a></li>
+                <li><a class="dropdown-item" href="#">Preferences</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./src/login.html">Login</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="hero-overlay d-flex align-items-center justify-content-center">
-        <div class="hero-content text-center my-4">
-          <h1 class="display-1 text-warning fw-bold mt-5 text-shadow">Your Journey to Paradise Begins Here</h1>
-          <p class="my-4 hero-quote lead px-2 subheading">Let PalmStar craft your dream vacation, filled with adventure,
-            relaxation, and moments of pure wonder.</p>
-          <div class="cta">
-            <a href="#destinations" class="btn btn-warning me-3">Explore Destinations</a>
-            <a href="#packages" class="btn btn-primary">View Packages</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    </nav>
 
-    <section class="achievements py-5">
-      <div class="container">
-        <h2 class="display-4 text-center mb-4">Our Commitment to
-          Excellence</h2>
-        <p class="lead text-center mb-5 ">PalmStar's dedication to exceptional travel experiences, by the numbers.</p>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="achievement-box text-center p-4 rounded-3  h-100 glass-effect">
-              <i class="bi bi-people-fill fs-2 mb-3 text-warning"></i>
-              <h1 class="display-1 gradient-text fw-bold text">1M+</h1>
-              <p>Happy Travelers</p>
+    <main>
+      <section id="home" class="hero-section user-select-none">
+        <div
+          id="carouselExampleSlidesOnly"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./static/img/bali.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="achievement-box text-center p-4 rounded-3 glass-effect h-100">
-              <i class="bi bi-calendar-check fs-2 mb-3 text-warning"></i>
-              <h1 class="display-1 fw-bold gradient-text">5</h1>
-              <p>Years of Experience</p>
+            <div class="carousel-item">
+              <img
+                src="./static/img/maasai-mara.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="achievement-box text-center p-4 rounded-3 glass-effect h-100">
-              <i class="bi bi-geo-alt fs-2 mb-3 text-warning"></i>
-              <h1 class="display-3 gradient-text fw-bold">100+</h1>
-              <p>Destinations Worldwide</p>
+            <div class="carousel-item">
+              <img
+                src="./static/img/limestone-rock-phang-nga.webp"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="achievement-box text-center p-4 rounded-3 glass-effect h-100">
-              <i class="bi bi-star-fill fs-3 mb-3 text-warning"></i>
-              <h1 class="display-2 gradient-text fw-bold">95%</h1>
-              <p>Customer Satisfaction</p>
+            <div class="carousel-item">
+              <img
+                src="./static/img/PHI-PHI-ISLANDS.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="achievement-box text-center p-4 rounded-3 glass-effect h-100">
-              <i class="bi bi-arrow-repeat fs-3 mb-3 text-warning"></i>
-              <h1 class="display-2 gradient-text fw-bold">80%</h1>
-              <p>Repeat Customers</p>
+            <div class="carousel-item">
+              <img
+                src="./static/img/tahiti.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="achievement-box text-center p-4 rounded-3 glass-effect h-100">
-              <i class="bi bi-tree-fill fs-2 mb-3 text-warning"></i>
-              <h1 class="display-2 gradient-text fw-bold">5%</h1>
-              <p>Profits to Community Projects</p>
+            <div class="carousel-item">
+              <img
+                src="./static/img/rayyu-maldives.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="features" class="py-5 mt-3">
-      <div class="container">
-        <h2 class="text-center my-5 display-4">Unlock the Magic of
-          Travel with PalmStar</h2>
-        <p class="text-center mb-5 lead">Your journey is more than just a destination &hyphen; it's an unforgettable
-          experience.</p>
-
-        <div class="row features">
-          <div class="col-lg-4 mb-4">
-            <div class="feature-box rounded-3 shadow p-4 text-center">
-              <div class="feature-icon mb-3 mx-auto">
-                <i class="bi bi-globe fs-1 text-warning"></i>
-              </div>
-              <h3 class="mb-2">Global Exploration</h3>
-              <p>Embark on extraordinary adventures to breathtaking corners of the globe. From secluded islands to
-                vibrant cities, we unveil a world of possibilities, limited only by your imagination.</p>
+            <div class="carousel-item">
+              <img
+                src="./static/img/maldives.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <div class="feature-box rounded-3 shadow p-4 text-center">
-              <div class="feature-icon mb-3 mx-auto">
-                <i class="bi bi-compass fs-1 text-warning"></i>
-              </div>
-              <h3 class="mb-2">Expert Guidance</h3>
-              <p>Our seasoned travel experts are your trusted companions, curating seamless journeys and providing
-                insider knowledge to ensure every step of your adventure is smooth, insightful, and worry-free.</p>
+            <div class="carousel-item">
+              <img
+                src="./static/img/moosa-haleem.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <div class="feature-box rounded-3 shadow p-4 text-center">
-              <div class="feature-icon mb-3 mx-auto">
-                <i class="bi bi-brush fs-1 text-warning"></i>
-              </div>
-              <h3 class="mb-2">Crafted Experiences</h3>
-              <p>Your journey is a masterpiece in the making. We tailor each itinerary to your unique desires, whether
-                you seek thrilling adventures, peaceful retreats, or a blend of cultural immersion and relaxation.</p>
+            <div class="carousel-item">
+              <img
+                src="./static/img/raja_ampat_indonesia.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./static/img/Mauritius_hero.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./static/img/IMG_3289.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./static/img/costa-rica.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-
-
-    <section id="destinations" class="user-select-none py-5">
-      <div class="container">
-        <h2 class="display-4 mb-4 text-center">Discover Your Dream
-          Getaway</h2>
-        <p class="lead mb-5 text-center">PalmStar's curated collection of extraordinary destinations.</p>
-
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center">
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="./static/img/bali.jpg" class="card-img-top" alt="Bali">
-              <div class="card-body">
-                <h5 class="card-title">Bali, Indonesia</h5>
-                <p class="card-text">Lush rice terraces, ancient temples, vibrant nightlife, and world-class surfing
-                  await.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Best time: April - October</small>
-                  <div class="btn-group">
-                    <a href="bali-details.html" class="btn btn-sm btn-outline-secondary">Read More</a>
-                    <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                      data-bs-target="#bookingModal" data-destination="Bali, Indonesia"
-                      data-package-name="Bali Bliss: 8-Day Cultural Escape" data-best-time="April - October">Book
-                      Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="./static/img/santorini.jpg" class="card-img-top" alt="Santorini">
-              <div class="card-body">
-                <h5 class="card-title">Santorini, Greece</h5>
-                <p class="card-text">Romantic sunsets, whitewashed villages, volcanic beaches, and ancient ruins
-                  create a magical escape.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Best time: May - September</small>
-                  <div class="btn-group">
-                    <a href="bali-details.html" class="btn btn-sm btn-outline-secondary">Read More</a>
-                    <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                      data-bs-target="#bookingModal" data-destination="Santorini, Greece"
-                      data-package-name="European Highlights" data-best-time="May - September">Book
-                      Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="./static/img/machu-picchu.jpg" class="card-img-top" alt="Machu Picchu">
-              <div class="card-body">
-                <h5 class="card-title">Machu Picchu, Peru</h5>
-                <p class="card-text">Trek through the Andes to reach this ancient Incan citadel, a marvel of
-                  engineering and breathtaking scenery.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Best time: May - September</small>
-                  <div class="btn-group">
-                    <a href="bali-details.html" class="btn btn-sm btn-outline-secondary">Read More</a>
-                    <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                      data-bs-target="#bookingModal" data-destination="Machu Picchu, Peru"
-                      data-package-name="Machu Picchu" data-best-time="May - September">Book
-                      Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="./static/img/queenstown.jpg" class="card-img-top" alt="Queenstown">
-              <div class="card-body">
-                <h5 class="card-title">Queenstown, New Zealand</h5>
-                <p class="card-text">The adventure capital of the world, offering bungee jumping, skydiving, hiking,
-                  and stunning mountain views.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Best time: December - February</small>
-                  <div class="btn-group">
-                    <a href="bali-details.html" class="btn btn-sm btn-outline-secondary">Read More</a>
-                    <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                      data-bs-target="#bookingModal" data-destination="Queenstown, New Zealand"
-                      data-package-name="Queenstown, New Zealand" data-best-time="December - February">Book
-                      Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="./static/img/Iceland.webp" class="card-img-top" alt="Iceland">
-              <div class="card-body">
-                <h5 class="card-title">Iceland</h5>
-                <p class="card-text">Witness the Northern Lights, explore glaciers, soak in hot springs, and
-                  experience the unique beauty of this Nordic wonderland.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Best time: June - August</small>
-                  <div class="btn-group">
-                    <a href="bali-details.html" class="btn btn-sm btn-outline-secondary">Read More</a>
-                    <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                      data-bs-target="#bookingModal" data-destination="Iceland" data-package-name="Iceland"
-                      data-best-time="June - August">Book
-                      Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="./static/img/tahiti.jpg" class="card-img-top" alt="Tahiti">
-              <div class="card-body">
-                <h5 class="card-title">Tahiti, French Polynesia</h5>
-                <p class="card-text">Escape to a paradise of turquoise lagoons, overwater bungalows, vibrant coral
-                  reefs, and the captivating spirit of Polynesian culture.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Best time: May - October</small>
-                  <div class="btn-group">
-                    <a href="bali-details.html" class="btn btn-sm btn-outline-secondary">Read More</a>
-                    <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                      data-bs-target="#bookingModal" data-destination="Tahiti, French Polynesia"
-                      data-package-name="Tahiti" data-best-time="May - October">Book
-                      Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="./static/img/rayyu-maldives.jpg" class="card-img-top" alt="Maldives">
-              <div class="card-body">
-                <h5 class="card-title">Maldives</h5>
-                <p class="card-text">Discover a paradise of overwater bungalows, pristine beaches, crystal-clear
-                  waters, and vibrant coral reefs. Indulge in luxury and tranquility in this secluded haven.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Best time: November - April</small>
-                  <div class="btn-group">
-                    <a href="bali-details.html" class="btn btn-sm btn-outline-secondary">Read More</a>
-                    <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                      data-bs-target="#bookingModal" data-destination="Maldives" data-package-name="Maldives"
-                      data-best-time="November - April">Book
-                      Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="./static/img/maasai-mara.jpg" class="card-img-top" alt="Maasai Mara">
-              <div class="card-body">
-                <h5 class="card-title">Maasai Mara, Kenya</h5>
-                <p class="card-text">Witness the Great Migration, encounter majestic wildlife on thrilling game
-                  drives, and experience the rich culture of the Maasai people.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Best time: July - October</small>
-                  <div class="btn-group">
-                    <a href="bali-details.html" class="btn btn-sm btn-outline-secondary">Read More</a>
-                    <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
-                      data-bs-target="#bookingModal" data-destination="Maasai Mara, Kenya"
-                      data-package-name="Kenya Safari Adventures: 10 Days" data-best-time="July - October">Book
-                      Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-5">
-          <a href="#" class="btn btn-warning">Explore More Destinations</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="packages" class="py-5">
-      <div class="container">
-        <h2 class="display-4 mb-4 text-center">Unforgettable Experiences, Curated
-          for You</h2>
-        <p class="lead mb-5 text-center">Discover our exclusive travel packages designed to ignite your wanderlust.</p>
-
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 align-items-center justify-content-center">
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="./static/img/bali-package.jpg" class="card-img-top" alt="Bali Package">
-              <div class="card-body">
-                <h5 class="card-title">Bali Bliss: 8-Day Cultural Escape</h5>
-                <p class="card-text">Explore the cultural heart of Ubud, relax on pristine beaches, and experience the
-                  island's unique spirituality.</p>
-                <ul class="list-unstyled">
-                  <li><i class="bi bi-check2-circle"></i> 7 nights in luxury accommodations</li>
-                  <li><i class="bi bi-check2-circle"></i> Daily breakfast & 3 gourmet dinners</li>
-                  <li><i class="bi bi-check2-circle"></i> Guided tours of temples and rice terraces</li>
-                  <li><i class="bi bi-check2-circle"></i> Yoga and meditation sessions</li>
-                </ul>
-                <p class="card-text text-warning fw-bold text-center">From $1,899 per person</p>
-                <div class="d-flex justify-content-center">
-                  <a href="#" class="btn btn-warning">View Details & Book</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="./static/img/safari-package.webp" class="card-img-top" alt="Safari Package">
-              <div class="card-body">
-                <h5 class="card-title">Kenya Safari Adventure: 10 Days</h5>
-                <p class="card-text">Witness the Great Migration in the Maasai Mara, encounter diverse wildlife, and
-                  immerse yourself in the rich culture of Kenya.</p>
-                <ul class="list-unstyled">
-                  <li><i class="bi bi-check2-circle"></i> 9 nights in luxurious safari lodges</li>
-                  <li><i class="bi bi-check2-circle"></i> Multiple game drives with experienced guides</li>
-                  <li><i class="bi bi-check2-circle"></i> Visit a Maasai village for a cultural exchange</li>
-                  <li><i class="bi bi-check2-circle"></i> All-inclusive meals and drinks</li>
-                </ul>
-                <p class="card-text text-warning fw-bold text-center">From $3,299 per person</p>
-                <div class="d-flex justify-content-center">
-                  <a href="#" class="btn btn-warning">View Details & Book</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="./static/img/european-highlights.jpg" class="card-img-top" height="200px"
-                alt="European Highlights Package">
-              <div class="card-body">
-                <h5 class="card-title my-3">European Highlights: 12 Days</h5>
-                <p class="card-text">Experience the iconic cities and charming countryside of Europe, from the Eiffel
-                  Tower in Paris to the canals of Venice.</p>
-                <ul class="list-unstyled my-2">
-                  <li><i class="bi bi-check2-circle"></i> 11 nights in centrally located hotels</li>
-                  <li class="my-1"><i class="bi bi-check2-circle"></i> High-speed train travel between cities</li>
-                  <li><i class="bi bi-check2-circle"></i> Guided tours of major landmarks</li>
-                  <li class="my-1"><i class="bi bi-check2-circle"></i> Plenty of free time for exploration</li>
-                </ul>
-                <p class="card-text text-warning fw-bold text-center my-2">From $2,499 per person</p>
-                <div class="d-flex justify-content-center">
-                  <a href="#" class="btn btn-warning">View Details & Book</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="./static/img/vietnam-package.png" class="card-img-top h-100" alt="Vietnam Package">
-              <div class="card-body">
-                <h5 class="card-title">Enchanting Vietnam: 10-Day Journey</h5>
-                <p class="card-text">Explore the vibrant cities, ancient temples, stunning landscapes, and delicious
-                  cuisine of Vietnam, from bustling Hanoi to serene Halong Bay.</p>
-                <ul class="list-unstyled">
-                  <li><i class="bi bi-check2-circle"></i> 9 nights in comfortable hotels and a traditional junk boat
-                  </li>
-                  <li><i class="bi bi-check2-circle"></i> City tours of Hanoi and Ho Chi Minh City</li>
-                  <li><i class="bi bi-check2-circle"></i> Overnight cruise in Halong Bay</li>
-                  <li><i class="bi bi-check2-circle"></i> Cooking class and street food tour</li>
-                  <li><i class="bi bi-check2-circle"></i> Visit the ancient city of Hoi An</li>
-                </ul>
-                <p class="card-text text-warning fw-bold text-center">From $1,299 per person</p>
-                <div class="d-flex justify-content-center">
-                  <a href="#" class="btn btn-warning">View Details & Book</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-5">
-          <a href="#" class="btn btn-warning">Explore All Packages</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="about-sect py-5 text-light">
-      <div class="container py-4">
-        <div class="row align-items-center">
-          <div class="col-md-6 mb-4 mb-md-0">
-            <div class="graphic-container"> <img src="./static/img/about-palm.png" alt="Palm Tree Graphic"
-                class="img-fluid">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <h2 class="display-4 mb-4">Why Choose PalmStar?</h2>
-            <p class="lead mb-4">More Than Just a Vacation, It's an Experience.</p>
-            <p class="mb-4">
-              PalmStar isn't just another travel agency. We're your partners in crafting unique, personalized adventures
-              that awaken your senses and leave you with stories to tell.
+        <div
+          class="hero-overlay d-flex align-items-center justify-content-center"
+        >
+          <div class="hero-content text-center my-4">
+            <h1 class="display-1 text-warning fw-bold mt-5 text-shadow">
+              Your Journey to Paradise Begins Here
+            </h1>
+            <p class="my-4 hero-quote lead px-2 subheading">
+              Let PalmStar craft your dream vacation, filled with adventure,
+              relaxation, and moments of pure wonder.
             </p>
-            <div class="row align-items-center">
-              <div class="col-md-4 mb-3">
-                <div class="feature-icon mb-2 d-flex align-items-center justify-content-center">
-                  <img src="./static/img/palm-tree-svgrepo-com.svg" alt="Palm Tree" width="60">
-                </div>
-                <h5 class="mb-2 text-center">Discover Hidden Paradises</h5>
-                <p>Uncover secluded beaches, enchanting forests, and captivating cultures with our carefully crafted
-                  tours.</p>
-              </div>
-              <div class="col-md-4 mb-3">
-                <div class="feature-icon mb-2 d-flex align-items-center justify-content-center">
-                  <img src="./static/img/cocktail-svgrepo-com.svg" alt="Cocktail" width="60">
-                </div>
-                <h5 class="mb-2 text-center">Savor Local Delights</h5>
-                <p>Treat your taste buds to authentic flavors and culinary delights from around the globe, curated just
-                  for you.</p>
-              </div>
-              <div class="col-md-4 mb-3">
-                <div class="feature-icon mb-2 d-flex align-items-center justify-content-center">
-                  <img src="./static/img/camera.svg" alt="Camera" width="60">
-                </div>
-                <h5 class="mb-2 text-center">Capture Timeless Memories</h5>
-                <p>Preserve your adventures with stunning photographs and cherish the moments that take your breath
-                  away.</p>
-              </div>
+            <div class="cta">
+              <a href="#destinations" class="btn btn-warning me-3"
+                >Explore Destinations</a
+              >
+              <a href="#packages" class="btn btn-primary">View Packages</a>
             </div>
-            <a href="#destinations" class="btn btn-warning mt-4 justify-content-center">Explore Our Destinations</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="testimonials" class="py-5">
-      <div class="container">
-        <h2 class="display-4 mb-4 text-center">Our Travelers Speak</h2>
-        <p class="lead mb-5 text-center">Hear firsthand accounts of the extraordinary experiences PalmStar creates.</p>
+      <section class="achievements py-5">
+        <div class="container">
+          <h2 class="display-4 text-center mb-4">
+            Our Commitment to Excellence
+          </h2>
+          <p class="lead text-center mb-5">
+            PalmStar's dedication to exceptional travel experiences, by the
+            numbers.
+          </p>
 
-        <div class="testimonial-container d-flex py-3" id="testimonialSlider">
-          <div class="testimonial-card p-3 shadow rounded-3 mx-3">
-            <i class="bi bi-quote quote-icon text-warning mb-3"></i>
-            <p class="testimonial-text">“PalmStar transformed our honeymoon into a magical journey. The attention to
-              detail was impeccable, and every moment felt like a dream come true.”</p>
-            <footer class="blockquote-footer mt-3">Sarah & John</footer>
-            <cite title="Source Title">Newlyweds, Bali Bliss Package</cite>
-          </div>
-          <div class="testimonial-card p-3 shadow rounded-3 mx-3 ">
-            <i class="bi bi-quote quote-icon text-warning mb-3"></i>
-            <p class="testimonial-text">“Our safari adventure in Kenya with PalmStar was an experience we'll never
-              forget. The wildlife encounters were incredible, and our guide's knowledge was truly impressive.”</p>
-            <footer class="blockquote-footer mt-3">David & Emily</footer>
-            <cite title="Source Title">Nature Enthusiasts, Kenya Safari Adventure</cite>
-          </div>
-          <div class="testimonial-card p-3 shadow rounded-3 mx-3 ">
-            <i class="bi bi-quote quote-icon text-warning mb-3"></i>
-            <p class="testimonial-text">“PalmStar made our family vacation to Europe effortless and enjoyable. We loved
-              the personalized itinerary and the unique experiences we had in each city.”</p>
-            <footer class="blockquote-footer mt-3">The Thompson Family</footer>
-            <cite title="Source Title">Family Travelers, European Highlights</cite>
-          </div>
-          <div class="testimonial-card p-3 shadow rounded-3 mx-3 ">
-            <i class="bi bi-quote quote-icon text-warning mb-3"></i>
-            <p class="testimonial-text">“PalmStar's Bali Bliss package was the perfect blend of relaxation and cultural
-              immersion. We loved the personalized yoga sessions and the breathtaking temple tours.”</p>
-            <footer class="blockquote-footer mt-3">Emily & Ben</footer>
-            <cite title="Source Title">Honeymooners, Bali Bliss Package</cite>
-          </div>
-          <div class="testimonial-card p-3 shadow rounded-3 mx-3 ">
-            <i class="bi bi-quote quote-icon text-warning mb-3"></i>
-            <p class="testimonial-text">“The Kenya Safari Adventure exceeded all our expectations! Seeing the Great
-              Migration up close was a dream come true, and the staff at the lodges made us feel like family.”</p>
-            <footer class="blockquote-footer mt-3">The Johnson Family</footer>
-            <cite title="Source Title">Family of 4, Kenya Safari Adventure</cite>
-          </div>
-          <div class="testimonial-card p-3 shadow rounded-3 mx-3 ">
-            <i class="bi bi-quote quote-icon text-warning mb-3"></i>
-            <p class="testimonial-text">“We were so impressed with PalmStar's ability to create a custom itinerary for
-              our European adventure. We saw everything we wanted to see, and the pace was just right for us.”</p>
-            <footer class="blockquote-footer mt-3">Maria & Carlos</footer>
-            <cite title="Source Title">Couple, Custom European Itinerary</cite>
-          </div>
-          <div class="testimonial-card p-3 shadow rounded-3 mx-3 ">
-            <i class="bi bi-quote quote-icon text-warning mb-3"></i>
-            <p class="testimonial-text">“PalmStar made our dream trip to Machu Picchu a reality. The hike was
-              challenging but rewarding, and the guides were incredibly knowledgeable and supportive.”</p>
-            <footer class="blockquote-footer mt-3">Mahira</footer>
-            <cite title="Source Title">Solo Traveler, Maldives</cite>
-          </div>
-          <div class="testimonial-card p-3 shadow rounded-3 mx-3 ">
-            <i class="bi bi-quote quote-icon text-warning mb-3"></i>
-            <p class="testimonial-text">
-              "PalmStar's commitment to sustainable tourism impressed us. Our eco-lodge in Costa Rica was stunning, and
-              the conservation efforts were truly inspiring."
-            </p>
-            <footer class="blockquote-footer mt-3">Olivia & Noah</footer>
-            <cite title="Source Title">Eco-Travelers, Costa Rica Eco-Adventure</cite>
-          </div>
-
-          <div class="testimonial-card p-3 shadow rounded-3 mx-3 ">
-            <i class="bi bi-quote quote-icon text-warning mb-3"></i>
-            <p class="testimonial-text">
-              "PalmStar planned a surprise birthday trip for my husband that was beyond amazing. He was thrilled with
-              the hot air balloon ride over the vineyards in Napa Valley!"
-            </p>
-            <footer class="blockquote-footer mt-3">Sundus</footer>
-            <cite title="Source Title">Surprise Planner, Napa Valley Getaway</cite>
-          </div>
-        </div>
-        <div class="dots-container text-center mt-4" id="testimonialDots"></div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Primary booking function -->
-  <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 fw-bold">Book Your Adventure with
-            PalmStar</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action="" method="get" class="form-group">
-            <input type="hidden" id="selected-destination" name="destination" value="">
-            <div class="mb-3">
-              <label for="destination" class="form-label fw-bold">Destination</label>
-              <select class="form-select" id="destination" aria-label="Select Destination" required>
-                <option selected disabled value="">Where to?</option>
-                <option value="bali">Bali, Indonesia</option>
-                <option value="santorini">Santorini, Greece</option>
-                <option value="machu-picchu">Machu Picchu, Peru</option>
-                <option value="queenstown">Queenstown, New Zealand</option>
-                <option value="iceland">Iceland</option>
-                <option value="tahiti">Tahiti, French Polynesia</option>
-                <option value="maldives">Maldives</option>
-                <option value="maasai-mara">Maasai Mara, Kenya</option>
-              </select>
-            </div>
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="checkin-date" class="form-label fw-bold">Check-in Date</label>
-                <input type="date" class="form-control" id="checkin-date" required>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="checkout-date" class="form-label fw-bold">Check-out Date</label>
-                <input type="date" class="form-control" id="checkout-date" required>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="guests" class="form-label fw-bold">Travelers</label>
-              <div class="row">
-                <div class="col-6">
-                  <input type="number" class="form-control" id="adults" placeholder="Adults" min="1" required>
-                </div>
-                <div class="col-6">
-                  <input type="number" class="form-control" id="children" placeholder="Children" min="0">
-                </div>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="budget" class="form-label fw-bold">Budget (Optional)</label>
-              <input type="text" class="form-control" id="budget" placeholder="$">
-            </div>
-
-            <div class="mb-3">
-              <label for="additional-info" class="form-label fw-bold">Additional Information (Optional)</label>
-              <textarea class="form-control" id="additional-info" rows="3"></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button type="submit" class="btn btn-primary">Confirm</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="bg-dark text-light py-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center">
-          <img src="./static/img/palmstar-logo.png" alt="PalmStar Logo" width="120">
-          <p class="mt-3">Your Gateway to Extraordinary Adventures</p>
-          <div class="social-icons d-flex justify-content-evenly">
-            <a href="#" class="social-icon text-light" title="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-icon text-light" title="Twitter/X"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="social-icon text-light" title="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="social-icon text-light" title="YouTube"><i class="bi bi-youtube"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-8 col-md-6 mb-4 mb-lg-0">
           <div class="row">
-            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-              <h5>Explore</h5>
-              <ul class="list-unstyled">
-                <li><a href="#destinations" class="text-light text-decoration-none">Destinations</a></li>
-                <li><a href="#packages" class="text-light text-decoration-none">Packages</a></li>
-                <li><a href="#" class="text-light text-decoration-none">Adventures</a></li>
-                <li><a href="./src/blog.html" class="text-light text-decoration-none">Blog</a></li>
-              </ul>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div
+                class="achievement-box text-center p-4 rounded-3 h-100 glass-effect"
+              >
+                <i class="bi bi-people-fill fs-2 mb-3 text-warning"></i>
+                <h1 class="display-1 gradient-text fw-bold text">1M+</h1>
+                <p>Happy Travelers</p>
+              </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-              <h5>Plan Your Trip</h5>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-light text-decoration-none">Booking</a></li>
-                <li><a href="#" class="text-light text-decoration-none">Travel Insurance</a></li>
-                <li><a href="#" class="text-light text-decoration-none">FAQs</a></li>
-              </ul>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div
+                class="achievement-box text-center p-4 rounded-3 glass-effect h-100"
+              >
+                <i class="bi bi-calendar-check fs-2 mb-3 text-warning"></i>
+                <h1 class="display-1 fw-bold gradient-text">5</h1>
+                <p>Years of Experience</p>
+              </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-              <h5>Company</h5>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
-                <li><a href="./src/contact.html" class="text-light text-decoration-none">Contact Us</a></li>
-                <li><a href="#" class="text-light text-decoration-none">Careers</a></li>
-              </ul>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div
+                class="achievement-box text-center p-4 rounded-3 glass-effect h-100"
+              >
+                <i class="bi bi-geo-alt fs-2 mb-3 text-warning"></i>
+                <h1 class="display-3 gradient-text fw-bold">100+</h1>
+                <p>Destinations Worldwide</p>
+              </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-              <h5>Legal</h5>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
-                <li><a href="#" class="text-light text-decoration-none">Terms of Service</a></li>
-              </ul>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div
+                class="achievement-box text-center p-4 rounded-3 glass-effect h-100"
+              >
+                <i class="bi bi-star-fill fs-3 mb-3 text-warning"></i>
+                <h1 class="display-2 gradient-text fw-bold">95%</h1>
+                <p>Customer Satisfaction</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div
+                class="achievement-box text-center p-4 rounded-3 glass-effect h-100"
+              >
+                <i class="bi bi-arrow-repeat fs-3 mb-3 text-warning"></i>
+                <h1 class="display-2 gradient-text fw-bold">80%</h1>
+                <p>Repeat Customers</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div
+                class="achievement-box text-center p-4 rounded-3 glass-effect h-100"
+              >
+                <i class="bi bi-tree-fill fs-2 mb-3 text-warning"></i>
+                <h1 class="display-2 gradient-text fw-bold">5%</h1>
+                <p>Profits to Community Projects</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="row mt-5">
-        <div class="col-12 text-center">
-          <h2 class="display-6">Ready for Your Dream Getaway?</h2>
-          <p class="lead">Start planning your next adventure with PalmStar today!</p>
-          <a href="#" class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#footerBookingModal">Book
-            Your
-            Trip</a>
-        </div>
-      </div>
+      <section id="features" class="py-5 mt-3">
+        <div class="container">
+          <h2 class="text-center my-5 display-4">
+            Unlock the Magic of Travel with PalmStar
+          </h2>
+          <p class="text-center mb-5 lead">
+            Your journey is more than just a destination &hyphen; it's an
+            unforgettable experience.
+          </p>
 
-      <div class="row mt-4">
-        <div class="col-12 text-center">
-          <p>&copy; 2024 PalmStar Inc. All Rights Reserved.</p>
-        </div>
-      </div>
-      <button onclick="scrollToTop()" id="myBtn" title="Go to top" class="btn btn-warning">
-        <i class="bi bi-arrow-up"></i>
-      </button>
-    </div>
-  </footer>
-
-  <!-- Secondary booking function to request a quatation -->
-  <div class="modal fade" id="footerBookingModal" tabindex="-1" aria-labelledby="footerBookingModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 fw-bold" id="footerBookingModalLabel">Plan Your Dream Vacation</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action="" method="get" class="form-group">
-            <div class="mb-3">
-              <label for="destination" class="form-label fw-bold">Destination</label>
-              <select class="form-select" id="destination" aria-label="Select Destination">
-                <option selected disabled value="">Where to?</option>
-                <option value="bali">Bali, Indonesia</option>
-                <option value="santorini">Santorini, Greece</option>
-                <option value="machu-picchu">Machu Picchu, Peru</option>
-                <option value="queenstown">Queenstown, New Zealand</option>
-                <option value="iceland">Iceland</option>
-                <option value="tahiti">Tahiti, French Polynesia</option>
-                <option value="maldives">Maldives</option>
-                <option value="maasai-mara">Maasai Mara, Kenya</option>
-              </select>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="checkin-date" class="form-label fw-bold">Check-in Date</label>
-                <input type="date" class="form-control" id="checkin-date" required>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="checkout-date" class="form-label fw-bold">Check-out Date</label>
-                <input type="date" class="form-control" id="checkout-date" required>
+          <div class="row features">
+            <div class="col-lg-4 mb-4">
+              <div class="feature-box rounded-3 shadow p-4 text-center">
+                <div class="feature-icon mb-3 mx-auto">
+                  <i class="bi bi-globe fs-1 text-warning"></i>
+                </div>
+                <h3 class="mb-2">Global Exploration</h3>
+                <p>
+                  Embark on extraordinary adventures to breathtaking corners of
+                  the globe. From secluded islands to vibrant cities, we unveil
+                  a world of possibilities, limited only by your imagination.
+                </p>
               </div>
             </div>
+            <div class="col-lg-4 mb-4">
+              <div class="feature-box rounded-3 shadow p-4 text-center">
+                <div class="feature-icon mb-3 mx-auto">
+                  <i class="bi bi-compass fs-1 text-warning"></i>
+                </div>
+                <h3 class="mb-2">Expert Guidance</h3>
+                <p>
+                  Our seasoned travel experts are your trusted companions,
+                  curating seamless journeys and providing insider knowledge to
+                  ensure every step of your adventure is smooth, insightful, and
+                  worry-free.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+              <div class="feature-box rounded-3 shadow p-4 text-center">
+                <div class="feature-icon mb-3 mx-auto">
+                  <i class="bi bi-brush fs-1 text-warning"></i>
+                </div>
+                <h3 class="mb-2">Crafted Experiences</h3>
+                <p>
+                  Your journey is a masterpiece in the making. We tailor each
+                  itinerary to your unique desires, whether you seek thrilling
+                  adventures, peaceful retreats, or a blend of cultural
+                  immersion and relaxation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="mb-3">
-              <label for="travelers" class="form-label fw-bold">Travelers</label>
+      <section id="destinations" class="user-select-none py-5">
+        <div class="container">
+          <h2 class="display-4 mb-4 text-center">
+            Discover Your Dream Getaway
+          </h2>
+          <p class="lead mb-5 text-center">
+            PalmStar's curated collection of extraordinary destinations.
+          </p>
+
+          <div
+            class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center"
+          >
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="./static/img/bali.jpg"
+                  class="card-img-top"
+                  alt="Bali"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Bali, Indonesia</h5>
+                  <p class="card-text">
+                    Lush rice terraces, ancient temples, vibrant nightlife, and
+                    world-class surfing await.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <small class="text-muted">Best time: April - October</small>
+                    <div class="btn-group">
+                      <a
+                        href="bali-details.html"
+                        class="btn btn-sm btn-outline-secondary"
+                        >Read More</a
+                      >
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookingModal"
+                        data-destination="Bali, Indonesia"
+                        data-package-name="Bali Bliss: 8-Day Cultural Escape"
+                        data-best-time="April - October"
+                      >
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="./static/img/santorini.jpg"
+                  class="card-img-top"
+                  alt="Santorini"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Santorini, Greece</h5>
+                  <p class="card-text">
+                    Romantic sunsets, whitewashed villages, volcanic beaches,
+                    and ancient ruins create a magical escape.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <small class="text-muted">Best time: May - September</small>
+                    <div class="btn-group">
+                      <a
+                        href="bali-details.html"
+                        class="btn btn-sm btn-outline-secondary"
+                        >Read More</a
+                      >
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookingModal"
+                        data-destination="Santorini, Greece"
+                        data-package-name="European Highlights"
+                        data-best-time="May - September"
+                      >
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="./static/img/machu-picchu.jpg"
+                  class="card-img-top"
+                  alt="Machu Picchu"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Machu Picchu, Peru</h5>
+                  <p class="card-text">
+                    Trek through the Andes to reach this ancient Incan citadel,
+                    a marvel of engineering and breathtaking scenery.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <small class="text-muted">Best time: May - September</small>
+                    <div class="btn-group">
+                      <a
+                        href="bali-details.html"
+                        class="btn btn-sm btn-outline-secondary"
+                        >Read More</a
+                      >
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookingModal"
+                        data-destination="Machu Picchu, Peru"
+                        data-package-name="Machu Picchu"
+                        data-best-time="May - September"
+                      >
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="./static/img/queenstown.jpg"
+                  class="card-img-top"
+                  alt="Queenstown"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Queenstown, New Zealand</h5>
+                  <p class="card-text">
+                    The adventure capital of the world, offering bungee jumping,
+                    skydiving, hiking, and stunning mountain views.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <small class="text-muted"
+                      >Best time: December - February</small
+                    >
+                    <div class="btn-group">
+                      <a
+                        href="bali-details.html"
+                        class="btn btn-sm btn-outline-secondary"
+                        >Read More</a
+                      >
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookingModal"
+                        data-destination="Queenstown, New Zealand"
+                        data-package-name="Queenstown, New Zealand"
+                        data-best-time="December - February"
+                      >
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="./static/img/Iceland.webp"
+                  class="card-img-top"
+                  alt="Iceland"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Iceland</h5>
+                  <p class="card-text">
+                    Witness the Northern Lights, explore glaciers, soak in hot
+                    springs, and experience the unique beauty of this Nordic
+                    wonderland.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <small class="text-muted">Best time: June - August</small>
+                    <div class="btn-group">
+                      <a
+                        href="bali-details.html"
+                        class="btn btn-sm btn-outline-secondary"
+                        >Read More</a
+                      >
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookingModal"
+                        data-destination="Iceland"
+                        data-package-name="Iceland"
+                        data-best-time="June - August"
+                      >
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="./static/img/tahiti.jpg"
+                  class="card-img-top"
+                  alt="Tahiti"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Tahiti, French Polynesia</h5>
+                  <p class="card-text">
+                    Escape to a paradise of turquoise lagoons, overwater
+                    bungalows, vibrant coral reefs, and the captivating spirit
+                    of Polynesian culture.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <small class="text-muted">Best time: May - October</small>
+                    <div class="btn-group">
+                      <a
+                        href="bali-details.html"
+                        class="btn btn-sm btn-outline-secondary"
+                        >Read More</a
+                      >
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookingModal"
+                        data-destination="Tahiti, French Polynesia"
+                        data-package-name="Tahiti"
+                        data-best-time="May - October"
+                      >
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="./static/img/rayyu-maldives.jpg"
+                  class="card-img-top"
+                  alt="Maldives"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Maldives</h5>
+                  <p class="card-text">
+                    Discover a paradise of overwater bungalows, pristine
+                    beaches, crystal-clear waters, and vibrant coral reefs.
+                    Indulge in luxury and tranquility in this secluded haven.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <small class="text-muted"
+                      >Best time: November - April</small
+                    >
+                    <div class="btn-group">
+                      <a
+                        href="bali-details.html"
+                        class="btn btn-sm btn-outline-secondary"
+                        >Read More</a
+                      >
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookingModal"
+                        data-destination="Maldives"
+                        data-package-name="Maldives"
+                        data-best-time="November - April"
+                      >
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="./static/img/maasai-mara.jpg"
+                  class="card-img-top"
+                  alt="Maasai Mara"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Maasai Mara, Kenya</h5>
+                  <p class="card-text">
+                    Witness the Great Migration, encounter majestic wildlife on
+                    thrilling game drives, and experience the rich culture of
+                    the Maasai people.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <small class="text-muted">Best time: July - October</small>
+                    <div class="btn-group">
+                      <a
+                        href="bali-details.html"
+                        class="btn btn-sm btn-outline-secondary"
+                        >Read More</a
+                      >
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#bookingModal"
+                        data-destination="Maasai Mara, Kenya"
+                        data-package-name="Kenya Safari Adventures: 10 Days"
+                        data-best-time="July - October"
+                      >
+                        Book Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-5">
+            <a href="#" class="btn btn-warning">Explore More Destinations</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="packages" class="py-5">
+        <div class="container">
+          <h2 class="display-4 mb-4 text-center">
+            Unforgettable Experiences, Curated for You
+          </h2>
+          <p class="lead mb-5 text-center">
+            Discover our exclusive travel packages designed to ignite your
+            wanderlust.
+          </p>
+
+          <div
+            class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 align-items-center justify-content-center"
+          >
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  src="./static/img/bali-package.jpg"
+                  class="card-img-top"
+                  alt="Bali Package"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Bali Bliss: 8-Day Cultural Escape</h5>
+                  <p class="card-text">
+                    Explore the cultural heart of Ubud, relax on pristine
+                    beaches, and experience the island's unique spirituality.
+                  </p>
+                  <ul class="list-unstyled">
+                    <li>
+                      <i class="bi bi-check2-circle"></i> 7 nights in luxury
+                      accommodations
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-circle"></i> Daily breakfast & 3
+                      gourmet dinners
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-circle"></i> Guided tours of
+                      temples and rice terraces
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-circle"></i> Yoga and meditation
+                      sessions
+                    </li>
+                  </ul>
+                  <p class="card-text text-warning fw-bold text-center">
+                    From $1,899 per person
+                  </p>
+                  <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-warning">View Details & Book</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  src="./static/img/safari-package.webp"
+                  class="card-img-top"
+                  alt="Safari Package"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Kenya Safari Adventure: 10 Days</h5>
+                  <p class="card-text">
+                    Witness the Great Migration in the Maasai Mara, encounter
+                    diverse wildlife, and immerse yourself in the rich culture
+                    of Kenya.
+                  </p>
+                  <ul class="list-unstyled">
+                    <li>
+                      <i class="bi bi-check2-circle"></i> 9 nights in luxurious
+                      safari lodges
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-circle"></i> Multiple game drives
+                      with experienced guides
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-circle"></i> Visit a Maasai village
+                      for a cultural exchange
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-circle"></i> All-inclusive meals
+                      and drinks
+                    </li>
+                  </ul>
+                  <p class="card-text text-warning fw-bold text-center">
+                    From $3,299 per person
+                  </p>
+                  <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-warning">View Details & Book</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  src="./static/img/european-highlights.jpg"
+                  class="card-img-top"
+                  height="200px"
+                  alt="European Highlights Package"
+                />
+                <div class="card-body">
+                  <h5 class="card-title my-3">European Highlights: 12 Days</h5>
+                  <p class="card-text">
+                    Experience the iconic cities and charming countryside of
+                    Europe, from the Eiffel Tower in Paris to the canals of
+                    Venice.
+                  </p>
+                  <ul class="list-unstyled my-2">
+                    <li>
+                      <i class="bi bi-check2-circle"></i> 11 nights in centrally
+                      located hotels
+                    </li>
+                    <li class="my-1">
+                      <i class="bi bi-check2-circle"></i> High-speed train
+                      travel between cities
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-circle"></i> Guided tours of major
+                      landmarks
+                    </li>
+                    <li class="my-1">
+                      <i class="bi bi-check2-circle"></i> Plenty of free time
+                      for exploration
+                    </li>
+                  </ul>
+                  <p class="card-text text-warning fw-bold text-center my-2">
+                    From $2,499 per person
+                  </p>
+                  <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-warning">View Details & Book</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  src="./static/img/vietnam-package.png"
+                  class="card-img-top h-100"
+                  alt="Vietnam Package"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Enchanting Vietnam: 10-Day Journey</h5>
+                  <p class="card-text">
+                    Explore the vibrant cities, ancient temples, stunning
+                    landscapes, and delicious cuisine of Vietnam, from bustling
+                    Hanoi to serene Halong Bay.
+                  </p>
+                  <ul class="list-unstyled">
+                    <li>
+                      <i class="bi bi-check2-circle"></i> 9 nights in
+                      comfortable hotels and a traditional junk boat
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-circle"></i> City tours of Hanoi
+                      and Ho Chi Minh City
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-circle"></i> Overnight cruise in
+                      Halong Bay
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-circle"></i> Cooking class and
+                      street food tour
+                    </li>
+                    <li>
+                      <i class="bi bi-check2-circle"></i> Visit the ancient city
+                      of Hoi An
+                    </li>
+                  </ul>
+                  <p class="card-text text-warning fw-bold text-center">
+                    From $1,299 per person
+                  </p>
+                  <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-warning">View Details & Book</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-5">
+            <a href="#" class="btn btn-warning">Explore All Packages</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-sect py-5 text-light">
+        <div class="container py-4">
+          <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+              <div class="graphic-container">
+                <img
+                  src="./static/img/about-palm.png"
+                  alt="Palm Tree Graphic"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h2 class="display-4 mb-4">Why Choose PalmStar?</h2>
+              <p class="lead mb-4">
+                More Than Just a Vacation, It's an Experience.
+              </p>
+              <p class="mb-4">
+                PalmStar isn't just another travel agency. We're your partners
+                in crafting unique, personalized adventures that awaken your
+                senses and leave you with stories to tell.
+              </p>
+              <div class="row align-items-center">
+                <div class="col-md-4 mb-3">
+                  <div
+                    class="feature-icon mb-2 d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="./static/img/palm-tree-svgrepo-com.svg"
+                      alt="Palm Tree"
+                      width="60"
+                    />
+                  </div>
+                  <h5 class="mb-2 text-center">Discover Hidden Paradises</h5>
+                  <p>
+                    Uncover secluded beaches, enchanting forests, and
+                    captivating cultures with our carefully crafted tours.
+                  </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div
+                    class="feature-icon mb-2 d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="./static/img/cocktail-svgrepo-com.svg"
+                      alt="Cocktail"
+                      width="60"
+                    />
+                  </div>
+                  <h5 class="mb-2 text-center">Savor Local Delights</h5>
+                  <p>
+                    Treat your taste buds to authentic flavors and culinary
+                    delights from around the globe, curated just for you.
+                  </p>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div
+                    class="feature-icon mb-2 d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="./static/img/camera.svg"
+                      alt="Camera"
+                      width="60"
+                    />
+                  </div>
+                  <h5 class="mb-2 text-center">Capture Timeless Memories</h5>
+                  <p>
+                    Preserve your adventures with stunning photographs and
+                    cherish the moments that take your breath away.
+                  </p>
+                </div>
+              </div>
+              <a
+                href="#destinations"
+                class="btn btn-warning mt-4 justify-content-center"
+                >Explore Our Destinations</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="py-5">
+        <div class="container">
+          <h2 class="display-4 mb-4 text-center">Our Travelers Speak</h2>
+          <p class="lead mb-5 text-center">
+            Hear firsthand accounts of the extraordinary experiences PalmStar
+            creates.
+          </p>
+
+          <div class="testimonial-container d-flex py-3" id="testimonialSlider">
+            <div class="testimonial-card p-3 shadow rounded-3 mx-3">
+              <i class="bi bi-quote quote-icon text-warning mb-3"></i>
+              <p class="testimonial-text">
+                “PalmStar transformed our honeymoon into a magical journey. The
+                attention to detail was impeccable, and every moment felt like a
+                dream come true.”
+              </p>
+              <footer class="blockquote-footer mt-3">Sarah & John</footer>
+              <cite title="Source Title">Newlyweds, Bali Bliss Package</cite>
+            </div>
+            <div class="testimonial-card p-3 shadow rounded-3 mx-3">
+              <i class="bi bi-quote quote-icon text-warning mb-3"></i>
+              <p class="testimonial-text">
+                “Our safari adventure in Kenya with PalmStar was an experience
+                we'll never forget. The wildlife encounters were incredible, and
+                our guide's knowledge was truly impressive.”
+              </p>
+              <footer class="blockquote-footer mt-3">David & Emily</footer>
+              <cite title="Source Title"
+                >Nature Enthusiasts, Kenya Safari Adventure</cite
+              >
+            </div>
+            <div class="testimonial-card p-3 shadow rounded-3 mx-3">
+              <i class="bi bi-quote quote-icon text-warning mb-3"></i>
+              <p class="testimonial-text">
+                “PalmStar made our family vacation to Europe effortless and
+                enjoyable. We loved the personalized itinerary and the unique
+                experiences we had in each city.”
+              </p>
+              <footer class="blockquote-footer mt-3">
+                The Thompson Family
+              </footer>
+              <cite title="Source Title"
+                >Family Travelers, European Highlights</cite
+              >
+            </div>
+            <div class="testimonial-card p-3 shadow rounded-3 mx-3">
+              <i class="bi bi-quote quote-icon text-warning mb-3"></i>
+              <p class="testimonial-text">
+                “PalmStar's Bali Bliss package was the perfect blend of
+                relaxation and cultural immersion. We loved the personalized
+                yoga sessions and the breathtaking temple tours.”
+              </p>
+              <footer class="blockquote-footer mt-3">Emily & Ben</footer>
+              <cite title="Source Title">Honeymooners, Bali Bliss Package</cite>
+            </div>
+            <div class="testimonial-card p-3 shadow rounded-3 mx-3">
+              <i class="bi bi-quote quote-icon text-warning mb-3"></i>
+              <p class="testimonial-text">
+                “The Kenya Safari Adventure exceeded all our expectations!
+                Seeing the Great Migration up close was a dream come true, and
+                the staff at the lodges made us feel like family.”
+              </p>
+              <footer class="blockquote-footer mt-3">The Johnson Family</footer>
+              <cite title="Source Title"
+                >Family of 4, Kenya Safari Adventure</cite
+              >
+            </div>
+            <div class="testimonial-card p-3 shadow rounded-3 mx-3">
+              <i class="bi bi-quote quote-icon text-warning mb-3"></i>
+              <p class="testimonial-text">
+                “We were so impressed with PalmStar's ability to create a custom
+                itinerary for our European adventure. We saw everything we
+                wanted to see, and the pace was just right for us.”
+              </p>
+              <footer class="blockquote-footer mt-3">Maria & Carlos</footer>
+              <cite title="Source Title"
+                >Couple, Custom European Itinerary</cite
+              >
+            </div>
+            <div class="testimonial-card p-3 shadow rounded-3 mx-3">
+              <i class="bi bi-quote quote-icon text-warning mb-3"></i>
+              <p class="testimonial-text">
+                “PalmStar made our dream trip to Machu Picchu a reality. The
+                hike was challenging but rewarding, and the guides were
+                incredibly knowledgeable and supportive.”
+              </p>
+              <footer class="blockquote-footer mt-3">Mahira</footer>
+              <cite title="Source Title">Solo Traveler, Maldives</cite>
+            </div>
+            <div class="testimonial-card p-3 shadow rounded-3 mx-3">
+              <i class="bi bi-quote quote-icon text-warning mb-3"></i>
+              <p class="testimonial-text">
+                "PalmStar's commitment to sustainable tourism impressed us. Our
+                eco-lodge in Costa Rica was stunning, and the conservation
+                efforts were truly inspiring."
+              </p>
+              <footer class="blockquote-footer mt-3">Olivia & Noah</footer>
+              <cite title="Source Title"
+                >Eco-Travelers, Costa Rica Eco-Adventure</cite
+              >
+            </div>
+
+            <div class="testimonial-card p-3 shadow rounded-3 mx-3">
+              <i class="bi bi-quote quote-icon text-warning mb-3"></i>
+              <p class="testimonial-text">
+                "PalmStar planned a surprise birthday trip for my husband that
+                was beyond amazing. He was thrilled with the hot air balloon
+                ride over the vineyards in Napa Valley!"
+              </p>
+              <footer class="blockquote-footer mt-3">Sundus</footer>
+              <cite title="Source Title"
+                >Surprise Planner, Napa Valley Getaway</cite
+              >
+            </div>
+          </div>
+          <div
+            class="dots-container text-center mt-4"
+            id="testimonialDots"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Primary booking function -->
+    <div
+      class="modal fade"
+      id="bookingModal"
+      tabindex="-1"
+      aria-labelledby="bookingModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 fw-bold">
+              Book Your Adventure with PalmStar
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="get" class="form-group">
+              <input
+                type="hidden"
+                id="selected-destination"
+                name="destination"
+                value=""
+              />
+              <div class="mb-3">
+                <label for="destination" class="form-label fw-bold"
+                  >Destination</label
+                >
+                <select
+                  class="form-select"
+                  id="destination"
+                  aria-label="Select Destination"
+                  required
+                >
+                  <option selected disabled value="">Where to?</option>
+                  <option value="bali">Bali, Indonesia</option>
+                  <option value="santorini">Santorini, Greece</option>
+                  <option value="machu-picchu">Machu Picchu, Peru</option>
+                  <option value="queenstown">Queenstown, New Zealand</option>
+                  <option value="iceland">Iceland</option>
+                  <option value="tahiti">Tahiti, French Polynesia</option>
+                  <option value="maldives">Maldives</option>
+                  <option value="maasai-mara">Maasai Mara, Kenya</option>
+                </select>
+              </div>
               <div class="row">
-                <div class="col-6">
-                  <input type="number" class="form-control" id="adults" placeholder="Adults" min="1" required>
+                <div class="col-md-6 mb-3">
+                  <label for="checkin-date" class="form-label fw-bold"
+                    >Check-in Date</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="checkin-date"
+                    required
+                  />
                 </div>
-                <div class="col-6">
-                  <input type="number" class="form-control" id="children" placeholder="Children" min="0">
+                <div class="col-md-6 mb-3">
+                  <label for="checkout-date" class="form-label fw-bold"
+                    >Check-out Date</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="checkout-date"
+                    required
+                  />
                 </div>
               </div>
-            </div>
 
-            <div class="mb-3">
-              <label for="trip-style" class="form-label fw-bold">Trip Style</label>
-              <select class="form-select" id="trip-style" aria-label="Select Trip Style">
-                <option selected disabled value="">Choose...</option>
-                <option value="adventure">Adventure</option>
-                <option value="luxury">Luxury</option>
-                <option value="family">Family</option>
-                <option value="honeymoon">Honeymoon</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
+              <div class="mb-3">
+                <label for="guests" class="form-label fw-bold">Travelers</label>
+                <div class="row">
+                  <div class="col-6">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="adults"
+                      placeholder="Adults"
+                      min="1"
+                      required
+                    />
+                  </div>
+                  <div class="col-6">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="children"
+                      placeholder="Children"
+                      min="0"
+                    />
+                  </div>
+                </div>
+              </div>
 
-            <div class="mb-3">
-              <label for="interests" class="form-label fw-bold">Interests (Optional)</label>
-              <textarea class="form-control" id="interests" rows="3"
-                placeholder="e.g., Beaches, Hiking, Culture, History..."></textarea>
-            </div>
+              <div class="mb-3">
+                <label for="budget" class="form-label fw-bold"
+                  >Budget (Optional)</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="budget"
+                  placeholder="$"
+                />
+              </div>
 
-            <div class="mb-3">
-              <label for="budget" class="form-label fw-bold">Budget (Optional)</label>
-              <input type="text" class="form-control" id="budget" placeholder="$">
-            </div>
-
-            <div class="mb-3">
-              <label for="additional-info" class="form-label fw-bold">Additional Information (Optional)</label>
-              <textarea class="form-control" id="additional-info" rows="3"
-                placeholder="Tell us more about your dream vacation!"></textarea>
-            </div>
-          </form>
+              <div class="mb-3">
+                <label for="additional-info" class="form-label fw-bold"
+                  >Additional Information (Optional)</label
+                >
+                <textarea
+                  class="form-control"
+                  id="additional-info"
+                  rows="3"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">Confirm</button>
+          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button type="submit" class="btn btn-warning">Search/Get a Quote</button>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center">
+            <img
+              src="./static/img/palmstar-logo.png"
+              alt="PalmStar Logo"
+              width="120"
+            />
+            <p class="mt-3">Your Gateway to Extraordinary Adventures</p>
+            <div class="social-icons d-flex justify-content-evenly">
+              <a href="#" class="social-icon text-light" title="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="social-icon text-light" title="Twitter/X"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="social-icon text-light" title="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="social-icon text-light" title="YouTube"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-8 col-md-6 mb-4 mb-lg-0">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Explore</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      href="#destinations"
+                      class="text-light text-decoration-none"
+                      >Destinations</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#packages" class="text-light text-decoration-none"
+                      >Packages</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-light text-decoration-none"
+                      >Adventures</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./src/blog.html"
+                      class="text-light text-decoration-none"
+                      >Blog</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Plan Your Trip</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" class="text-light text-decoration-none"
+                      >Booking</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-light text-decoration-none"
+                      >Travel Insurance</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-light text-decoration-none">FAQs</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Company</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" class="text-light text-decoration-none"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="./src/contact.html"
+                      class="text-light text-decoration-none"
+                      >Contact Us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-light text-decoration-none"
+                      >Careers</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Legal</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" class="text-light text-decoration-none"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="text-light text-decoration-none"
+                      >Terms of Service</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <h2 class="display-6">Ready for Your Dream Getaway?</h2>
+            <p class="lead">
+              Start planning your next adventure with PalmStar today!
+            </p>
+            <a
+              href="#"
+              class="btn btn-warning btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#footerBookingModal"
+              >Book Your Trip</a
+            >
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <p>&copy; 2026 PalmStar Inc. All Rights Reserved.</p>
+          </div>
+        </div>
+        <button
+          onclick="scrollToTop()"
+          id="myBtn"
+          title="Go to top"
+          class="btn btn-warning"
+        >
+          <i class="bi bi-arrow-up"></i>
+        </button>
+      </div>
+    </footer>
+
+    <!-- Secondary booking function to request a quatation -->
+    <div
+      class="modal fade"
+      id="footerBookingModal"
+      tabindex="-1"
+      aria-labelledby="footerBookingModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 fw-bold" id="footerBookingModalLabel">
+              Plan Your Dream Vacation
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="get" class="form-group">
+              <div class="mb-3">
+                <label for="footer-destination" class="form-label fw-bold"
+                  >Destination</label
+                >
+                <select
+                  class="form-select"
+                  id="footer-destination"
+                  aria-label="Select Destination"
+                >
+                  <option selected disabled value="">Where to?</option>
+                  <option value="bali">Bali, Indonesia</option>
+                  <option value="santorini">Santorini, Greece</option>
+                  <option value="machu-picchu">Machu Picchu, Peru</option>
+                  <option value="queenstown">Queenstown, New Zealand</option>
+                  <option value="iceland">Iceland</option>
+                  <option value="tahiti">Tahiti, French Polynesia</option>
+                  <option value="maldives">Maldives</option>
+                  <option value="maasai-mara">Maasai Mara, Kenya</option>
+                </select>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="footer-checkin-date" class="form-label fw-bold"
+                    >Check-in Date</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="footer-checkin-date"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="footer-checkout-date" class="form-label fw-bold"
+                    >Check-out Date</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="footer-checkout-date"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="travelers" class="form-label fw-bold"
+                  >Travelers</label
+                >
+                <div class="row">
+                  <div class="col-6">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="footer-adults"
+                      placeholder="Adults"
+                      min="1"
+                      required
+                    />
+                  </div>
+                  <div class="col-6">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="footer-children"
+                      placeholder="Children"
+                      min="0"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="trip-style" class="form-label fw-bold"
+                  >Trip Style</label
+                >
+                <select
+                  class="form-select"
+                  id="trip-style"
+                  aria-label="Select Trip Style"
+                >
+                  <option selected disabled value="">Choose...</option>
+                  <option value="adventure">Adventure</option>
+                  <option value="luxury">Luxury</option>
+                  <option value="family">Family</option>
+                  <option value="honeymoon">Honeymoon</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="interests" class="form-label fw-bold"
+                  >Interests (Optional)</label
+                >
+                <textarea
+                  class="form-control"
+                  id="interests"
+                  rows="3"
+                  placeholder="e.g., Beaches, Hiking, Culture, History..."
+                ></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="footer-budget" class="form-label fw-bold"
+                  >Budget (Optional)</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="footer-budget"
+                  placeholder="$"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="additional-info" class="form-label fw-bold"
+                  >Additional Information (Optional)</label
+                >
+                <textarea
+                  class="form-control"
+                  id="additional-info"
+                  rows="3"
+                  placeholder="Tell us more about your dream vacation!"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-warning">
+              Search/Get a Quote
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="chat-icon" onclick="toggleChatWindow()" class="rounded-3" title="PalmStar Assistant">
-    <i class="bi bi-chat-dots fs-3 text-warning"></i>
-  </div>
+    <div
+      id="chat-icon"
+      onclick="toggleChatWindow()"
+      class="rounded-3"
+      title="PalmStar Assistant"
+    >
+      <i class="bi bi-chat-dots fs-3 text-warning"></i>
+    </div>
 
-  <div id="chat-window" class="chat-window">
-    <div class="chat-header about-sect d-flex align-items-center justify-content-between">
-      <div class="d-flex align-items-center">
-        <img src="./static/img/palmstar-logo.png" height="200px" alt="PalmStar Logo" class="img-fluid me-2 rounded-2">
-        <h5>PalmStar Travel Assistant</h5>
+    <div id="chat-window" class="chat-window">
+      <div
+        class="chat-header about-sect d-flex align-items-center justify-content-between"
+      >
+        <div class="d-flex align-items-center">
+          <img
+            src="./static/img/palmstar-logo.png"
+            height="200px"
+            alt="PalmStar Logo"
+            class="img-fluid me-2 rounded-2"
+          />
+          <h5>PalmStar Travel Assistant</h5>
+        </div>
+        <div class="close-button-container">
+          <button
+            class="btn-close text-light"
+            title="Close"
+            onclick="toggleChatWindow()"
+          ></button>
+        </div>
       </div>
-      <div class="close-button-container">
-        <button class="btn-close text-light" title="Close" onclick="toggleChatWindow()"></button>
+      <div class="chat-body"></div>
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button
+          type="button"
+          id="send-button"
+          onclick="sendMessage()"
+          aria-label="Send"
+        >
+          <i class="bi bi-send"></i>
+        </button>
       </div>
     </div>
-    <div class="chat-body"></div>
-    <div class="chat-input">
-      <input type="text" id="user-input" placeholder="Type your message...">
-      <button type="button" id="send-button" onclick="sendMessage()" aria-label="Send"><i
-          class="bi bi-send"></i></button>
-    </div>
-  </div>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-  <script src="./static/js/script.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./static/js/script.js"></script>
+  </body>
 </html>
