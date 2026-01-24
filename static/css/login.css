@@ -3,12 +3,13 @@
  */
 
 /* Container */
-.container {
+.container-c {
   background-color: #fff;
   padding: 20px;
   max-width: 500px;
+  margin: 50px auto;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 /* Header */
@@ -91,6 +92,14 @@ form {
   width: 100%;
 }
 
+/* Checkboxes and radio buttons should not take full width */
+.tab-content input[type="checkbox"],
+.tab-content input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+  margin-bottom: 0;
+}
+
 .tab-content button[type="submit"] {
   padding: 10px;
   background-color: #007bff;
@@ -99,6 +108,7 @@ form {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 20px;
 }
 
 .tab-content button[type="submit"]:hover {
