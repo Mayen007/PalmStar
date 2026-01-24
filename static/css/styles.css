@@ -2,6 +2,40 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Skip to content link for keyboard accessibility */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: #ffc107;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-to-content:focus {
+  left: 0;
+  top: 0;
+}
+
+/* Improved focus indicators for accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[role="button"]:focus {
+  outline: 3px solid #ffc107;
+  outline-offset: 2px;
+}
+
+/* Ensure decorative icons are hidden from screen readers */
+[aria-hidden="true"] {
+  speak: none;
+}
+
 h1,
 h2,
 h3,

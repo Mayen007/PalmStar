@@ -36,15 +36,25 @@ function handleScroll() {
 function toggleChatWindow() {
   const chatWindow = document.getElementById("chat-window");
   const chatIcon = document.getElementById("chat-icon");
+  const userInputField = document.getElementById("user-input");
 
   if (chatWindow.style.display === "none" || chatWindow.style.display === "") {
     chatWindow.style.display = "block";
     chatIcon.style.display = "none";
 
+    // Focus on input field when chat opens for better accessibility
+    if (userInputField) {
+      setTimeout(() => userInputField.focus(), 100);
+    }
+
     // Send welcome message ONLY when the chat window is opened
     sendWelcomeMessage();
   } else {
     chatWindow.style.display = "none";
+    // Return focus to chat icon when closing
+    if (chatIcon) {
+      chatIcon.focus();
+    }
     // Show the icon if the user is not on the hero section
     if (!heroSection) return;
     const heroRect = heroSection.getBoundingClientRect();
@@ -106,6 +116,15 @@ if (sendButton && userInputField) {
   });
 }
 
+// Add keyboard support for closing chat with Escape key
+if (chatWindow) {
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && chatWindow.style.display !== 'none') {
+      toggleChatWindow();
+    }
+  });
+}
+
 
 
 const testimonialSlider = document.getElementById('testimonialSlider');
@@ -118,11 +137,22 @@ if (testimonialSlider && testimonialDots) {
   testimonialCards.forEach((_, index) => {
     const dot = document.createElement('span');
     dot.classList.add('dot');
+    dot.setAttribute('role', 'button');
+    dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
+    dot.setAttribute('tabindex', '0');
     if (index === 0) {
       dot.classList.add('active');
+      dot.setAttribute('aria-current', 'true');
     }
     dot.addEventListener('click', () => {
       scrollToCard(index);
+    });
+    // Add keyboard support for dots
+    dot.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        scrollToCard(index);
+      }
     });
     testimonialDots.appendChild(dot);
   });
@@ -137,10 +167,14 @@ if (testimonialSlider && testimonialDots) {
 
   function updateActiveDot(index) {
     const dots = testimonialDots.querySelectorAll('.dot');
-    dots.forEach((dot) => {
+    dots.forEach((dot, i) => {
       dot.classList.remove('active'); // Reset active class for all dots
+      dot.removeAttribute('aria-current');
+      if (i === index) {
+        dot.classList.add('active');
+        dot.setAttribute('aria-current', 'true');
+      }
     });
-    dots[index].classList.add('active'); // Set active class for the new dot
   }
 
   // Automatic scroll (Optional)
