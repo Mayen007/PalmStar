@@ -1,84 +1,98 @@
-# 🌴 PalmStar
+# PalmStar
 
-**Your Gateway to Extraordinary Adventures**  
-PalmStar crafts immersive travel experiences that transcend the ordinary. Discover hidden gems, savor global flavors, and create memories that last a lifetime.
+PalmStar is being migrated from a static site to a MERN application.
 
----
+## Current Stack
 
-## ✨ About
+- Client: React + Vite
+- Server: Node.js + Express
+- Database: MongoDB (optional in current phase)
 
-A responsive travel website showcasing curated destinations and travel packages. Built with modern web technologies to provide an engaging user experience for travel enthusiasts.
-
----
-
-## 🚀 Features
-
-- **Destination Gallery**: Explore popular destinations like Bali, Santorini, Maldives, and more
-- **Travel Packages**: Pre-designed travel experiences with detailed itineraries
-- **Interactive Chat**: Built-in travel assistant for customer inquiries
-- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **Booking System**: Contact forms and quote request functionality
-- **Blog Section**: Travel tips and destination guides
-
----
-
-## 🛠️ Tech Stack
-
-- **Frontend**: HTML5, CSS3, JavaScript (ES6)
-- **Styling**: Bootstrap 5, Custom CSS with gradients and animations
-- **Icons**: Bootstrap Icons
-- **Fonts**: Google Fonts (Playfair Display, Roboto)
-
----
-
-## � Project Structure
+## Project Structure
 
 ```
-├── index.html          # Main homepage
-├── src/
-│   ├── blog.html       # Travel blog page
-│   ├── contact.html    # Contact form page
-│   └── login.html      # User authentication page
+PalmStar/
+├── client/
+├── server/
 ├── static/
-│   ├── css/
-│   │   └── styles.css  # Main stylesheet
-│   ├── img/            # Images and assets
-│   └── js/
-│       └── script.js   # Interactive functionality
-└── README.md
+├── src/
+├── index.html
+└── roadmap.md
 ```
 
----
+## Setup
 
-## 🌐 Getting Started
+1. Install server dependencies:
 
-### For Developers
+```bash
+cd server
+npm install
+```
 
-1. Clone the repository
-2. Open `index.html` in your browser or serve with a local web server
-3. No build process required - it's a static website
+2. Install client dependencies:
 
-### For Contributors
+```bash
+cd ../client
+npm install
+```
 
-1. 🍴 Fork the repository
-2. 🌿 Create a feature branch: `git checkout -b feat/your-feature-name`
-3. 📝 Commit your changes: `git commit -m "Add feature"`
-4. � Push and open a pull request
+## Environment Variables
 
----
+Server variables are defined in [server/.env.example](server/.env.example).
 
-## 📜 License
+```env
+PORT=5000
+MONGODB_URI=
+CLIENT_URL=http://localhost:5173
+```
 
-Distributed under the MIT License. See [LICENSE.md](LICENSE.md) for details.
+Client variables are defined in [client/.env.example](client/.env.example).
 
----
+```env
+VITE_API_BASE_URL=http://localhost:5000
+```
 
-## 📬 Connect
+## Run Locally (Separate Terminals)
 
-- 🌐 Live Site: [palmstar.onrender.com](https://palmstar.onrender.com)
-- 📧 Contact: Use the contact form on our website
-- 🐙 Issues: [GitHub Issues](https://github.com/Mayen007/PalmStar/issues)
+Run server in terminal 1:
 
----
+```bash
+cd server
+npm run dev
+```
 
-_Made with ❤️ for travel enthusiasts worldwide._
+Run client in terminal 2:
+
+```bash
+cd client
+npm run dev
+```
+
+## Useful Commands
+
+Server:
+
+```bash
+npm run start
+npm run dev
+npm run lint
+npm run format
+```
+
+Client:
+
+```bash
+npm run dev
+npm run build
+npm run lint
+npm run format
+```
+
+## Status
+
+- Phase 1 is implemented.
+- Phase 2 setup is in progress and focused on developer workflow and configuration.
+
+## License
+
+See [LICENSE.md](LICENSE.md).

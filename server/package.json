@@ -4,6 +4,10 @@
   "description": "Node.js + Express backend for PalmStar.",
   "main": "src/server.js",
   "scripts": {
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
   },
@@ -18,5 +22,10 @@
     "mongoose": "^9.4.1",
     "morgan": "^1.10.1",
     "nodemon": "^3.1.14"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.1",
+    "globals": "^17.0.0",
+    "prettier": "^3.6.2"
   }
 }
