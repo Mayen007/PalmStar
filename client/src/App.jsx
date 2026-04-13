@@ -1,48 +1,24 @@
-import { useEffect, useState } from "react";
-import "./App.css";
+import { Navigate, Route, Routes } from 'react-router-dom';
+import PageLayout from './components/PageLayout';
+import HomePage from './pages/HomePage';
+import ContactPage from './pages/ContactPage';
+import BlogPage from './pages/BlogPage';
+import LoginPage from './pages/LoginPage';
+import AdminPage from './pages/AdminPage';
+import './App.css';
 
 function App() {
-  const [health, setHealth] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    async function loadHealth() {
-      try {
-        const response = await fetch("/api/health");
-        if (!response.ok) {
-          throw new Error(`Health check failed: ${response.status}`);
-        }
-
-        const data = await response.json();
-        setHealth(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    loadHealth();
-  }, []);
-
   return (
-    <main className="app">
-      <h1>PalmStar Client</h1>
-      <p>Minimal React app connected to the Express API.</p>
-
-      {loading && <p className="status">Checking API health...</p>}
-
-      {!loading && error && <p className="status error">API error: {error}</p>}
-
-      {!loading && !error && health && (
-        <div className="status success">
-          <p>Status: {health.status}</p>
-          <p>Service: {health.service}</p>
-          <p>Time: {health.timestamp}</p>
-        </div>
-      )}
-    </main>
+    <Routes>
+      <Route element={<PageLayout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+      </Route>
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
 
